@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+
+@import url(header.css);
+@import url(hero.css);
+@import url(about-us.css);
+
+html {
+    width: 100%;
+}
+
+:root {
+    --rubik: 'Rubik', sans-serif;
+    --poppins: 'Poppins', sans-serif;
+    --raleway: 'Raleway', sans-serif;
+    --mukta: 'Mukta', sans-serif;
+
+    --primary-color: #00274d;
+    --secondary-color: #e33031;
+    --accent-color: #f5f5f5;
+
+    --black-200: #020202;
+    --black-300: #333333;
+    --black-400: #1f1e31;
+    --black-500: #555555;
+    --gray-100: #888888;
+
+    --header-height: 3.5rem;
+
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+
+    --primary-color-light:#305a82;
+    --primary-color-lighten:#4b83b7;
+    --white-color: #fff;
+    --body-color: hsl(220, 100%, 97%);
+
+    --normal-font-size: .938rem;
+
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: var(--accent-colors);
+    font-family: var(--mukta);
+
+
+}
+
+
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flip-horizontal {
+    transform: rotate(180deg);
+}
