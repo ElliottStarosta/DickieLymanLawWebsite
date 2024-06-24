@@ -41,7 +41,7 @@ splitTypes.forEach(char => {
             scrollTrigger: {
                 trigger: char,
                 start: 'top 75%',
-                end: 'top 20%',
+                end: 'top 30%',
                 scrub: true,
                 markers: false,
                 toggleActions: 'play play reverse reverse'
