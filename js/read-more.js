@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardContent = readMoreBtn.closest('.card__content');
         const cardExtraContent = cardContent.querySelector('.card__extra-content');
         const cardDescription = cardContent.querySelector('.card__description');
+        const cardBanner = cardContent.querySelector('.card__banner');
 
         readMoreBtn.addEventListener('click', () => {
             cardContent.classList.toggle('expanded');
@@ -29,13 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 console.log('stop')
                 readMoreBtn.textContent = 'Read Less';
-                cardExtraContent.style.display = 'block'; // Show extra content
+                cardExtraContent.style.display = 'block'; 
                 console.log('start')
                 cardDescription.style.display = 'none';
+                cardBanner.style.display = 'none'; 
             } else {
                 readMoreBtn.textContent = 'Read More';
-                cardExtraContent.style.display = 'none'; // Hide extra content
+                cardExtraContent.style.display = 'none';
+
                 cardDescription.style.display = 'flex';
+                cardBanner.style.display = 'flex'; 
             }
             
         });

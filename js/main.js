@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 
 AOS.init({
     duration: 2000,
-    once: false,
+    once: true,
     mirror: false,
     debounceDelay: 2000,
 });
@@ -63,5 +63,6 @@ window.addEventListener('scroll', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     var button = document.querySelector('.practice-areas-btn');
-    button.classList.add('visible'); // Add the 'visible' class when the DOM content is loaded
+    button.classList.add('visible'); 
 });
+

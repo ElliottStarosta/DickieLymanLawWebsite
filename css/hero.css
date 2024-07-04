@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .hero:before {
@@ -38,15 +39,6 @@
     gap: 40px;
 }
 
-.hero-svg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    height: auto;
-
-}
 
 .hero .container img {
     width: 100%;
@@ -75,6 +67,7 @@
     font-size: 3rem;
     align-items: center;
     margin-bottom: 8px;
+    line-height: 3rem;
 }
 
 .hero-text p {
@@ -122,12 +115,85 @@
     transform: scale(1.05) rotate(-3deg);
 }
 
-@media screen and (max-width: 1024px) {
-    .hero {
-        flex-direction: column;
-        align-items: center;
+@media screen and (max-width: 1550px) {
+  
+    .hero .container img {
+        max-width: 600px;
     }
 }
+
+@media screen and (max-width: 1475px) {
+    .typewrite {
+        font-size: 2.2rem;
+    }
+    .hero .container img {
+        max-width: 550px;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    } 
+
+    .practice-areas-btn {
+        font-size: 15px;
+        
+    }
+}
+@media screen and (max-width: 1475px) {
+   
+    .hero .container img {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 1355px) {
+    .typewrite {
+        font-size: 2rem;
+    }
+    .hero .container img {
+        max-width:500px;
+    }
+
+   
+}
+
+@media screen and (max-width: 1280px) {
+    .hero .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        min-height: calc(100vh - 35px);
+    }
+
+    .hero .container img {
+        width: 100%;
+        margin-top: calc(10vh + 10px);
+        display: none;
+    }
+
+    .hero .hero-text {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .hero p {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .hero .practice-areas-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 50px 50px 50px 50px;
+        margin-bottom: 5vh;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     .hero__title {

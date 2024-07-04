@@ -1,3 +1,7 @@
+.about-us {
+    min-height: calc(100vh - 45px);
+}
+
 .about__content-container {
     width: 90%;
     max-width: 1200px;
@@ -54,60 +58,117 @@
     color: var(--accent-color);
 }
 
-
-.card {
-    display: flex;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 600px;
-    margin: auto;
-    padding: 10px;
-    height: auto; /* Fixed height for consistency */
-    flex-direction: column;
+.about__lawyers {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.card__banner {
+.about__lawyers h2 {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    gap: 20px;
+    justify-content: center;
+    font-size: 45px;
+    margin-top: -4rem;
+    margin-bottom: 75px;
+    position: relative;
+    color: var(--primary-color);
 }
 
-.card__banner img {
-    width: 80px; /* Adjust width as needed */
-    height: 80px; /* Adjust height as needed */
-    object-fit: cover;
-    border-radius: 25%;
-    margin-right: 15px;
+.about__lawyers h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px; 
+    height: 4px; 
+    background-color: var(--secondary-color); 
 }
 
-.card__banner .card__name {
-    font-size: 1.5rem;
-    margin: 0;
+.lawyer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card {
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+    padding: 10px 0 10px 35px;
+    height: auto;
+    margin-bottom: 100px;
+}
+
+.card__info {
+    display: flex;
+    align-items: top;
+    gap: 10px;
 }
 
 .card__content {
-    padding-left: 20px;
     display: flex;
-    flex-direction: column;
-    flex: 2;
-    position: relative;
+    align-items: center;
+   
 }
 
-.card__name {
-    font-size: 1.5rem;
-    margin: 10px 0 0 0;
+.card__banner {
+    width: 300px;
+    margin-right: 3rem; 
 }
+
+.card__banner .img1,
+.card__banner .img2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 10px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.06);
+}
+
+.card__banner .img1 {
+    border-radius: 20px 0 0 20px; 
+}
+
+.card__banner .img2 {
+    border-radius: 0px 20px 20px 0px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.card__text {
+    flex: 1; 
+}
+
+.reverse-text {
+    /* margin-left: 15px; */
+    margin-right: 30px;
+}
+
+.card__text h3 {
+    font-size: 34px;
+    color: var(--secondary-color);
+}
+
+.card__name { 
+    margin: 10px 0 0 0;
+    font-weight: 900;
+}
+
 
 .card__description {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 15px 0 0 0;
-    overflow: hidden; /* Hide overflow to prevent text spilling over */
-    line-height: 1.2em;
+    overflow: hidden;
+    line-height: 1.5em;
     text-overflow: ellipsis;
-    position: relative; /* Ensure relative positioning for absolute gradient */
+    position: relative; 
 }
 
 .card__extra-content {
@@ -121,48 +182,47 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 70%;
+    height: 80%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), #ffffff);
 }
 
-.btn {
+
+
+.read-more {
+    border: 1px solid var(--black-200);
+    position: relative;
     display: inline-block;
-    border: none;
     background-color: transparent;
     color: inherit;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    font-size: 16px;
     font-weight: 400;
-    line-height: 2rem;
-    margin-top: 1rem;
-    max-width: 8rem;
-    position: relative;
+    padding: 5px 35px;
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
     text-transform: uppercase;
-    overflow: hidden;
-    z-index: 100; /* Ensure button is above the gradient overlay */
-}
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 1;
 
-.read-more {
-    border: 1px solid var(--black-200);
-    position: relative;
-    transition: all 0.3s ease-in-out;
-    z-index: 100; /* Ensure read more link is above the gradient overlay */
-}
 
-.read-more span {
-    z-index: 20;
 }
 
 .read-more:hover {
     background-color: var(--primary-color);
     color: var(--accent-color);
     opacity: 0.8;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
-    letter-spacing: 2px;
-    border: none;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05) rotate(3deg);
 }
+
+
+.read-more span {
+    position: relative;
+    z-index: 2;
+}
+
 
 .card__links {
     display: flex;
@@ -192,22 +252,22 @@
         max-width: 600px;
         margin: auto;
         padding: 10px;
-        height: auto; /* Fixed height for consistency */
+        height: auto;
         flex-direction: column;
     }
     
     .card__banner {
         display: flex;
         align-items: center;
-        margin-bottom: 10px; /* Adjust margin as needed */
+        margin-bottom: 10px;
     }
     
     .card__banner img {
-        width: 80px; /* Adjust width as needed */
-        height: 80px; /* Adjust height as needed */
+        width: 80px;
+        height: 80px; 
         object-fit: cover;
 
-        margin-right: 15px; /* Adjust margin as needed */
+        margin-right: 15px; 
     }
     
     .card__banner .card__name {
@@ -231,7 +291,7 @@
     .card__description {
         font-size: 1rem;
         margin: 15px 0 0 0;
-        overflow: hidden; /* Hide overflow to prevent text spilling over */
+        overflow: hidden; 
         line-height: 1.2em;
         text-overflow: ellipsis;
     }
@@ -271,37 +331,37 @@
     
     @media (max-width: 600px) {
         .card {
-            max-width: 100%; /* Ensure the card occupies full width of viewport */
-            width: 100%; /* Ensure the card occupies full width of viewport */
-            padding: 5px; /* Adjust padding for smaller screens */
+            max-width: 100%;
+            width: 100%; 
+            padding: 5px; 
         }
     
         .card__banner img {
-            width: 60px; /* Decrease image size for smaller screens */
+            width: 60px; 
             height: 60px;
-            margin-right: 10px; /* Adjust margin for smaller screens */
+            margin-right: 10px; 
         }
     
         .card__banner .card__name {
-            font-size: 1.2rem; /* Decrease font size for smaller screens */
+            font-size: 1.2rem;
         }
     
         .card__description {
-            font-size: 0.9rem; /* Decrease font size for smaller screens */
-            margin-top: 10px; /* Increase top margin for description on smaller screens */
+            font-size: 0.9rem; 
+            margin-top: 10px; 
         }
     
         .card__extra-content {
-            padding: 15px; /* Adjust padding for smaller screens */
+            padding: 15px; 
         }
     
         .extra-section h4 {
-            font-size: 1rem; /* Decrease font size for section headings on smaller screens */
+            font-size: 1rem; 
         }
     
         .extra-section p,
         .extra-section ul {
-            font-size: 0.85rem; /* Decrease font size for paragraphs and lists on smaller screens */
+            font-size: 0.85rem; 
         }
     }
     
@@ -319,9 +379,8 @@
 }
 
 .card__extra-content {
-    padding: 20px;
-    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
-    margin-top: 10px;
+    margin-top: 2rem;
+    padding: 10px;
 }
 
 .extra-section {
@@ -355,36 +414,122 @@
 
 @media (max-width: 600px) {
     .card {
-        max-width: 100%; /* Ensure the card occupies full width of viewport */
-        width: 100%; /* Ensure the card occupies full width of viewport */
-        padding: 5px; /* Adjust padding for smaller screens */
+        max-width: 100%;
+        width: 100%; 
+        padding: 5px; 
     }
 
     .card__banner img {
-        width: 60px; /* Decrease image size for smaller screens */
+        width: 60px; 
         height: 60px;
-        margin-right: 10px; /* Adjust margin for smaller screens */
+        margin-right: 10px; 
     }
 
     .card__banner .card__name {
-        font-size: 1.2rem; /* Decrease font size for smaller screens */
+        font-size: 1.2rem; 
     }
 
     .card__description {
-        font-size: 0.9rem; /* Decrease font size for smaller screens */
-        margin-top: 10px; /* Increase top margin for description on smaller screens */
+        font-size: 0.9rem; 
+        margin-top: 10px; 
     }
 
     .card__extra-content {
-        padding: 15px; /* Adjust padding for smaller screens */
+        padding: 15px; 
     }
 
     .extra-section h4 {
-        font-size: 1rem; /* Decrease font size for section headings on smaller screens */
+        font-size: 1rem; 
     }
 
     .extra-section p,
     .extra-section ul {
-        font-size: 0.85rem; /* Decrease font size for paragraphs and lists on smaller screens */
+        font-size: 0.85rem;
     }
+}
+
+
+.articles-publications {
+    padding: 50px 0;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.articles-publications h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    position: relative;
+    color: var(--accent-color);
+}
+
+.articles-publications h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+}
+
+.articles-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.article-item {
+    width: 500px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+}
+
+.article-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.article-image img {
+    width: 70%;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.article-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.article-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.article-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.article-content ul li {
+    margin-bottom: 5px;
+}
+
+.article-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.article-content a:hover {
+    color: var(--secondary-color);
 }
