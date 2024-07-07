@@ -53,7 +53,7 @@ splitTypes.forEach(char => {
 // Lenis scroll handling (assuming Lenis is used for scrolling, adjust as needed)
 const lenis = new Lenis();
 lenis.on('scroll', (e) => {
-    console.log(e);
+    // console.log(e);
 });
 
 // RAF (RequestAnimationFrame) loop

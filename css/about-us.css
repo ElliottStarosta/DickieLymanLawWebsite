@@ -460,6 +460,13 @@
     margin-bottom: 40px;
     position: relative;
     color: var(--accent-color);
+    padding: 1em 2em 1em 2em;
+    margin-top: 1em;
+    background: rgba(0,0,0,.3);
+    text-align: center;
+    color: white;
+    border-radius: .2em;
+    display: inline-block;
 }
 
 .articles-publications h2::after {

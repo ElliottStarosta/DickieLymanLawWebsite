@@ -1,7 +1,9 @@
 import Lenis from 'lenis';
 
-const lenis = new Lenis();
-
+const lenis = new Lenis({
+    duration: 1.5, // Set duration to 1.5 seconds for smoother and slower scroll
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function for smoothness
+});
 
 function raf(time) {
     lenis.raf(time);
@@ -13,17 +15,32 @@ requestAnimationFrame(raf);
 document.addEventListener('DOMContentLoaded', () => {
     $(document).ready(function() {
         lenis.start();
+        handleInitialHash();
     });
 });
 
-
-
 function scrollToAnchor(anchor) {
     lenis.scrollTo(anchor);
+
+    // Add classes to <html> element during smooth scroll
+    document.documentElement.classList.add('lenis', 'lenis-scrolling', 'lenis-smooth');
+    console.log("Scrolling");
+
+    // Remove classes after scroll animation completes
+    setTimeout(() => {
+        document.documentElement.classList.remove('lenis-scrolling', 'lenis-smooth');
+    }, lenis.options.duration * 1000); // Duration in milliseconds
 }
 
-// Event listener for main navigation links
-
+// Handle initial hash on page load
+function handleInitialHash() {
+    const hash = window.location.hash;
+    if (hash) {
+        setTimeout(() => {
+            scrollToAnchor(hash);
+        }, 100);
+    }
+}
 
 // Event listener for dropdown menu links
 document.querySelectorAll('.dropdown__link').forEach(link => {
@@ -33,10 +50,17 @@ document.querySelectorAll('.dropdown__link').forEach(link => {
 
         if (text.includes('Articles & Publications')) {
             updateHashAndLog('articles-publications');
-            scrollToAnchor('#articles-publications'); // Scroll to the anchor after updating hash
+            scrollToAnchor('#articles-publications'); 
+            setTimeout(() => {
+                scrollToAnchor('#articles-publications'); ;
+            }, 50);
+            
         } else if (text.includes('Our Lawyers')) {
             updateHashAndLog('our-lawyers');
             scrollToAnchor('#our-lawyers');
+            setTimeout(() => {
+                scrollToAnchor('#our-lawyers'); ;
+            }, 50);
         }
     });
 });
@@ -46,6 +70,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     contactButton.addEventListener("click", function() {
         updateHashAndLog('contact');
+        scrollToAnchor('#contact');
+        setTimeout(() => {
+            scrollToAnchor('#contact'); ;
+        }, 50);
     });
 });
 
@@ -58,60 +86,20 @@ document.querySelectorAll('.dropdown__sublink').forEach(link => {
         
         if (text.includes('John W. Dickie')) {
             updateHashAndLog('lawyer-dickie');
-            scrollToAnchor('#lawyer-dickie'); // Scroll to the anchor after updating hash
+            scrollToAnchor('#lawyer-dickie');
+            setTimeout(() => {
+                scrollToAnchor('#lawyer-dickie'); ;
+            }, 50);
         } else if (text.includes('S. David Lyman')) {
             updateHashAndLog('lawyer-lyman');
-            scrollToAnchor('#lawyer-lyman'); 
-        } else if (text.includes('S. David Lyman')) {
-            updateHashAndLog('lawyer-lyman');
-            scrollToAnchor('#lawyer-lyman'); 
-        } else if (text.includes('S. David Lyman')) {
-            updateHashAndLog('lawyer-lyman');
-            scrollToAnchor('#lawyer-lyman'); 
-        } else if (text.includes('S. David Lyman')) {
-            updateHashAndLog('lawyer-lyman');
-            scrollToAnchor('#lawyer-lyman'); 
-        } else if (text.includes('S. David Lyman')) {
-            updateHashAndLog('lawyer-lyman');
-            scrollToAnchor('#lawyer-lyman'); 
-        } 
+            scrollToAnchor('#lawyer-lyman');
+            setTimeout(() => {
+                scrollToAnchor('#lawyer-lyman'); ;
+            }, 50);
+            
+        }
     });
 });
-let toggleId, navId;
-
-export const showMenu = (_toggleId, _navId) => {
-  toggleId = _toggleId;
-  navId = _navId;
-
-  const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
-
-  toggle.addEventListener('click', () => {
-    // Add show-menu class to nav menu
-    nav.classList.toggle('show-menu');
-    // Toggle position property of body element
-    if (nav.classList.contains('show-menu')) {
-      document.body.style.position = 'fixed';
-    } else {
-      document.body.style.position = '';
-    }
-    // Add show-icon to show and hide the menu icon
-    toggle.classList.toggle('show-icon');
-  });
-};
-
-// Add event listeners to nav links
-document.querySelectorAll('.nav__link,.dropdown__link,.dropdown__sublink').forEach(link => {
-  link.addEventListener('click', () => {
-    document.body.style.position = '';
-    // Get the nav__toggle element using the global toggleId
-    const nav = document.getElementById('nav-menu');
-    // Remove show-icon class from nav__toggle
-    nav.classList.remove('show-menu');
-  });
-});
-
-
 
 function updateHashAndLog(hash) {
     // Update hash in the URL
