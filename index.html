@@ -17,7 +17,7 @@
       <header class="header">
          <nav class="nav">
             <div class="nav__data">
-               <a href="#home" class="nav__logo">
+               <a href="#home" class="nav__logo" id="logo">
                   <span class="name">Dickie <span>&amp;</span> Lyman</span><br>
                </a>
 
@@ -97,8 +97,8 @@
                      </ul>
                   </li>
 
-                  <li><a href="#articling" class="nav__link">Student Articling</a></li>
-                  <li><a href="#contact-us" class="nav__link contact">Contact Us</a></li>
+                  <li class="nav__link">Student Articling</li>
+                  <li class="nav__link contact">Contact Us</li>
                </ul>
             </div>
             <div class="nav__contact">
@@ -142,10 +142,10 @@
                   <span class="wrap"></span>
                   </a>
                  </h1>
-                 <p data-aos="fade-right">
+                 <p data-aos="fade-right" data-aos-once="false">
                      We are committed to providing the highest standards of legal service as a trusted Limited Liability Partnership (LLP). The information on this site is designed to inform you about our comprehensive services, our firm’s ethos, and the diverse areas of law in which we specialize.
                  </p>
-                 <button class="practice-areas-btn">
+                 <button class="practice-areas-btn" id="practice-areas-btn">
                      Our Practice Areas
                  </button>
              </div>
@@ -170,7 +170,7 @@
          </div>
          <div class="about__lawyers" id="our-lawyers">
             <div class="lawyer__container">
-            <h2>Our Lawyers</h2>
+            <h2 data-aos="fade-down">Our Lawyers</h2>
               <!-- First Lawyer - John Dickie -->
               <div class="card lawyer__profile" id="lawyer-dickie">
                <div class="card__content">
@@ -231,7 +231,7 @@
                         <p>John enjoys running, reading, playing bridge, and traveling. He has extensively explored England, Scotland, and all ten provinces of Canada, as well as several countries in Europe. He is happy to share travel tips and sightseeing ideas.</p>
                       </div>
                      </div>
-                     <a class="read-more btn" data-aos="fade-right">Read More</a>
+                     <a class="read-more" data-aos="fade-right">Read More</a>
                      <div class="card__links" data-aos="fade-up">
                        <a href="mailto:john@example.com" class="card__icon"><i class="ri-mail-line mail"></i></a>
                        <a href="https://linkedin.com/in/johndickie" class="card__icon"><i class="ri-linkedin-box-fill linkedin"></i></a>
@@ -305,7 +305,7 @@
                          <p>David frequently presents at industry events and has authored material for various real estate organizations. His contributions to legal education and public speaking are well-recognized in the field.</p>
                        </div>
                      </div>
-                     <a class="read-more btn" data-aos="fade-right">Read More</a>
+                     <a class="read-more" data-aos="fade-right">Read More</a>
                      <div class="card__links" data-aos="fade-up">
                        <a href="mailto:david@example.com" class="card__icon"><i class="ri-mail-line mail"></i></a>
                        <a href="https://linkedin.com/in/davidlyman" class="card__icon"><i class="ri-linkedin-box-fill linkedin"></i></a>
@@ -352,42 +352,257 @@
          </div>        
    </section>
    <section id="practice-areas">
-      
       <div class="container-pa">
-         <div class="practice__areas-flex">
-            <div class="intro-text">
-               <h2 data-aos="fade-down">Practice Areas</h2>
-               <p>Explore our areas of legal expertise and services.</p>
+        <div class="practice__areas-flex">
+          <div class="intro-text">
+            <h2 data-aos="fade-down">Practice Areas</h2>
+          </div>
+          <div class="practice-cards">
+            <div class="practice-card" data-id="1" id="residential-tenancy-law">
+               <img src="assets/people-shaking.png" alt="Practice Area 1">
+               <h3>Residential Tenancy Law</h3>
+               <p class="short-description">Residential Tenancy Law encompasses regulations governing tenant and landlord rights, obligations, and dispute resolutions in rental properties.</p>
+               <div class="full-description">
+                  <h2>Rent Payment and Increases</h2>
+                  <h3>Non-Payment of Rent</h3>
+                  <p>When a tenant fails to pay rent, landlords have legal rights. Acting promptly with official notices is crucial, though the RTA mandates waiting periods after issuing notices.</p>
+                  <h3>Vacancy Decontrol</h3>
+                  <p>Upon leasing to new tenants, landlords can set rent at their discretion initially. It's essential to establish a fair rent initially, as subsequent increases are generally limited.</p>
+                  <h3>Discounts</h3>
+                  <p>Using discounts can legally set a higher rent than what tenants actually pay, with complex rules dictating future rent increases under the RTA.</p>
+                  <h3>Rent Increases</h3>
+                  <p>Landlords can increase rent based on various limits and opportunities, requiring at least 12 months between increases. Notice of Rent Increase (NORI) forms like the N1 must be provided 90 days in advance, justifying increases within the guideline.</p>
+                  <h3>Rent Increases by Applications</h3>
+                  <p>For major repairs or renovations, landlords can apply to raise rents above the guideline. Special rules apply, such as for mobile home parks or extraordinary tax increases.</p>
+                  <h3>Rent Increases by Agreement</h3>
+                  <p>Agreements for rent increases due to repairs or renovations are limited to 3% of the rent, allowing tenants to cancel within 5 days. Specific forms like those for NORI are required.</p>
+                  <h2>Legal Rights and Responsibilities</h2>
+                  <h3>Maintenance Disputes</h3>
+                  <p>Landlords must maintain rental units unless damaged by tenants, with possible rent reductions if obligations aren't met under the RTA.</p>
+                  <h3>Personal Use</h3>
+                  <p>Restrictions apply when landlords want to move in or allow family members to occupy rental units. The process starts with an approved Board termination notice, potentially leading to eviction orders.</p>
+                  <h2>Tax-Related Matters</h2>
+                  <h3>Tax Driven Rent Reductions</h3>
+                  <p>Automatic rent reductions occur if municipal property taxes decrease significantly, affecting all residential units. Notices must detail rent changes due to tax reductions.</p>
+                  <h3>Applications about Tax Driven Rent Reductions</h3>
+                  <p>Landlords can apply for rent reduction adjustments if taxes are a minimal portion of annual rents, subject to deadlines set by the Tribunal.</p>
+                  <h3>Applications about Tax Increases</h3>
+                  <p>In cases of property tax increases beyond regulated amounts, landlords can apply for rent increases exceeding guidelines.</p>
+                  <h3>Our Services</h3>
+                  <p>We offer guidance on landlord rights, obligations, and strategies to optimize property financial returns.</p>
+              </div>
+               <button class="read-more explore-more-btn">Explore More</button>
              </div>
-             <div class="card-carousel">
-               <div class="card-pa" id="1">
-                 <div class="image-container"></div>
-                 <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
-               </div>
-               <div class="card-pa" id="2">
-                 <div class="image-container"></div>
-                 <p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
-               </div>
-               <div class="card-pa" id="3">
-                 <div class="image-container"></div>
-                 <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
-               </div>  
-               <div class="card-pa" id="4">
-                 <div class="image-container"></div>
-                 <p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
-               </div>
-               <div class="card-pa" id="5">
-                 <div class="image-container"></div>
-                 <p>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
-               </div>
-             </div>
-             <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
-           </div>
-         </div>
-    </section>
-    
+            <div class="practice-card" data-id="2" id="property-tax-assessment-law">
+              <img src="assets/property-tax.png" alt="Practice Area 2">
+              <h3>Property Tax & Assessment Law</h3>
+              <p class="short-description">Property Tax & Assessment Law covers regulations and deadlines concerning property tax applications, assessments, tenant notifications, and strategic tax planning in Ontario.</p>
+              <div class="full-description">
+               <p>Through 1997, 1998 and 1999 the government of Ontario has made many reforms to the property tax system. This section deals mainly with the law as it applies at January 2007 and for the future.</p>
 
-   
+             <div class="deadlines">
+               <h2>Deadlines</h2>
+               <p>There are many deadlines for taking action, filing information or giving notices regarding property tax issues. Some of the more important ones are set out below:</p>
+               <ul>
+                 <li><strong>February 28:</strong> Deadline for the following Municipal Act applications:</li>
+                 <ul>
+                   <li>Section 357 (formerly 442): Application for cancellation, reduction or refund of taxes for reasons such as a property "change event," or a property becoming exempt, or razed by file or demolition, or undergoing repairs or renovations of over 3 months.</li>
+                   <li>Section 364 (formerly 442.5): Application for rebates for vacant commercial or industrial property. Note eligibility requirements and other details set out in O.Reg. 325/01.</li>
+                   <li>Section 361 (formerly 442.1): Application for a tax rebate for eligible charities.</li>
+                   <li>Section 334 (formerly 447.73): Gross or manifest error in tax bills if want ability to appeal.</li>
+                 </ul>
+                 <li><strong>March 31:</strong> Appeal from the assessment for that year's taxes.</li>
+                 <li><strong>September 30 or 30 days after final tax notice:</strong> Provide notice to commercial or industrial tenants with gross leases to charge them the equivalent of the former business occupancy tax.</li>
+                 <li><strong>November 1 (fifth year following the year in respect of which the application is made):</strong> Application for the cancellation, reduction or refund of taxes due to an overcharging by reason of a gross or manifest error in the calculation of taxes. Under the previous rules, the deadline was February 28 of the following year. The new application deadline is in effect only until January 1, 2005. After that, the February 28 deadline may apply.</li>
+               </ul>
+             </div>  
+             <div class="tax-recoveries">
+               <h2>Tax Recoveries</h2>
+               <p>Billing commercial and industrial tenants for tax recoveries has become a very complicated operation. Issues many owners deal with include:</p>
+               <ul>
+                 <li>Different tax rates for different assessment portions (for example, office tower, shopping centre and residual commercial).</li>
+                 <li>Determining the building's taxes if fully occupied.</li>
+                 <li>Setting a standard tax rate in the building or separate standard tax rates for different uses in a mixed use building (for example, ground floor retail versus office, which is not the same as the difference between office tower and commercial).</li>
+                 <li>The allocation provisions in all the leases.</li>
+                 <li>Tenants' tax caps.</li>
+                 <li>Changes faced by tenants because of the elimination of separate business occupancy tax rates.</li>
+                 <li>Landlord's shortfalls.</li>
+               </ul>
+             </div>
+               
+             
+               <h2>Budgeting and Planning</h2>
+               <p>For the 1998, 1999 and 2000 property taxes, new assessments were put in place based on 1996 market values. However for most owners, the final 1998, 1999 and 2000 taxes did not fully reflect the new assessments because increases were capped, and decreases were clawed back to make up the revenue lost by the caps.</p>
+               <p>For the 2001 and 2002 property taxes, new assessments were issued based on 1999 market values. For the 2003 property taxes, new assessments were issued based on 2001 market values. From 2004 to the end of 2005, the assessments were based on market values at June 30 of the previous year. The new valuation date used to determine property values for '06, '07, and '08 taxes, is January 1, 2005. However, the taxes on many properties are still capped or clawed back. Therefore, taxes will change from year to year even if assessments stay constant.</p>
+               <p>The taxation system includes different tax rates on different classes of properties. For this and other reasons there are significant new issues for property tax planning which can reduce taxes. Many of the planning issues have long lead times, and are best implemented early in new developments or early in re-developments. The sooner you get advice the better off you will be.</p>
+             
+               <h2>Our Services</h2>
+               <p>We would be happy to advise you about your assessments, filing appeals, negotiating with assessors, allocating taxes between tenants, or any other property tax related matters.</p>
+           </div>
+              <button class="read-more explore-more-btn">Explore More</button>
+            </div>
+            <div class="practice-card" data-id="3" id="commerical-tenacy-law">
+              <img src="assets/commerical-law.png" alt="Practice Area 3">
+              <h3>Commercial Tenancy Law</h3>
+              <p class="short-description"> Commercial Tenancy Law governs leasing rights, obligations, and dispute resolutions for business properties.</p>
+              <div class="full-description">
+               <h2>Our Expertise in Commercial Tenancy Law</h2>
+               <div class="deadlines">
+                   <ul>
+                       <li><strong>Leasing Negotiations:</strong> We negotiate lease agreements to secure favorable terms for our clients.</li>
+                       <li><strong>Sublet Issues:</strong> Resolving disputes related to subletting agreements under Ontario law.</li>
+                       <li><strong>Lease Interpretations:</strong> Providing legal counsel on lease terms and interpreting lease agreements in compliance with Ontario regulations.</li>
+                       <li><strong>Area Calculation Disputes:</strong> Addressing disputes concerning the calculation and interpretation of leased areas under Ontario's commercial tenancy laws.</li>
+                       <li><strong>Tax Recovery Disputes:</strong> Assisting clients in recovering unpaid taxes and resolving tax-related issues specific to commercial properties in Ontario.</li>
+                   </ul>
+               </div>     
+               <h2>Our Services</h2>
+               <p>We specialize in commercial tenancy law in Ontario, providing expert representation for property owners, property managers, and tenants in diverse leasing matters. Beyond direct representation, we foster partnerships with legal professionals across Ontario to skillfully resolve intricate commercial tenancy challenges.</p>
+               </div>           
+              <button class="read-more explore-more-btn">Explore More</button>
+            </div>
+            <div class="practice-card" data-id="4" id="government-relations">
+              <img src="assets/gov-relations.png" alt="Practice Area 4">
+              <h3>Government Relations</h3>
+              <p class="short-description">Government Relations involves advocating legal positions to elected officials and government agencies. It focuses on influencing laws and regulations relevant to specific areas, ensuring compliance and addressing client interests effectively.</p>
+              <div class="full-description">
+               <p>For both organizations and individuals, we advocate positions to elected decision-makers and bureaucrats at all levels of government in Ottawa, in Ontario, and in other provinces across Canada.</p>
+               
+               <h3>Major Clients</h3>
+               <div class="deadlines">
+                  <ul>
+                     <li>The Eastern Ontario Landlord Organization (EOLO)</li>
+                     <li>The Canadian Federation of Apartment Associations / Fédération canadienne des associations de propriétaires immobiliers (CFAA-FCAPI)</li>
+                 </ul>
+               </div>
+              
+
+               <h4>Eastern Ontario Landlord Organization (EOLO)</h4>
+               <p>Our firm provides executive direction and administrative support for EOLO, utilizing all members to handle government relations and general operations efficiently. For more information, visit <a href="http://www.eolo.ca">www.eolo.ca</a>.</p>
+               
+
+               <h4>The Canadian Federation of Apartment Associations / Fédération canadienne des associations de propriétaires immobiliers (CFAA-FCAPI)</h4>
+               <p>Formerly, John Dickie served as President and main spokesperson for CFAA-FCAPI. Our firm provided executive direction and administrative support, revitalizing the organization during our tenure. We engaged all members of our firm in cost-effective government relations and general operations for CFAA-FCAPI. For more information, visit <a href="http://www.cfaa-fcapi.org">www.cfaa-fcapi.org</a>.</p>
+
+               <h4>Advocacy for Taxpayers and Non-Profit Organizations</h4>
+
+               <p>John Dickie and David Lyman also advocate for individual multi-residential and commercial taxpayers, as well as non-profit organizations, on matters such as rent control, landlord and tenant law, property tax exemptions, vacancy rebates, and property tax levels across Ontario and Canada.</p>
+               <h2>Our Services</h2>
+               <p>We are committed to exploring how we can assist you in your government relations needs.</p>
+               
+               <p>EOLO and CFAA-FCAPI have provided explicit consent for their information to appear on this website.</p>
+            </div>
+              <button class="read-more explore-more-btn">Explore More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="student-articling">
+      <div class="articling-container" data-aos="fade-up">
+          <div class="articling-section" data-aos="fade-down">
+              <h2>Articling at Dickie & Lyman</h2>
+              <p class="section-description">Discover why Dickie & Lyman is the ideal place to start your legal career.</p>
+          </div>
+  
+          <div class="articling-section" data-aos="fade-down">
+              <h3>Who Are We Looking For?</h3>
+              <p>Dickie & Lyman seeks candidates who embody ability, diligence, and persistence, fostering integration into our professional team dedicated to excellence. We value effective client service and proficiency in complex legal work, alongside creativity and a penchant for innovative practices. Our evaluation process emphasizes not only strong academic performance but also substantial consideration of extracurricular engagement, community involvement, professional experience, and worldly exposure.</p>
+          </div>
+  
+          <div class="articling-section" data-aos="fade-down">
+              <h3>Why Us?</h3>
+              <p>Dickie & Lyman combines the resources of a large firm with the personalized benefits of a smaller organization. We offer a structured student education program and specialized legal education initiatives, alongside organized business promotion efforts, efficient time management practices, formal performance evaluations, regular feedback loops, and sophisticated management protocols. Our firm fosters a collegial, informal work environment that encourages close collaboration among all team members, facilitating extensive student interaction with clients and lawyers. Additionally, we provide bi-weekly firm lunches, hands-on experience in business promotion, a practical understanding of legal operations, a strong focus on skills enhancement, and ongoing educational opportunities for students.</p>
+          </div>
+  
+          <div class="articling-section" data-aos="fade-down">
+              <h3>Student Education & Evaluation</h3>
+              <ul>
+                  <li>Frequent interaction with all our lawyers</li>
+                  <li>Orientation and training in the firm systems</li>
+                  <li>Formal performance reviews and regular feedback (lawyer to student and student to lawyer)</li>
+                  <li>Frequent opportunities for informal interaction with lawyers and support team members</li>
+                  <li>Monthly education sessions on skills development topics
+                      <ul>
+                          <li>Professional Responsibility</li>
+                          <li>Interviewing & Advising</li>
+                          <li>Planning and Conduct of a Matter</li>
+                          <li>File and Practice Management</li>
+                          <li>Negotiation</li>
+                          <li>Advocacy</li>
+                      </ul>
+                  </li>
+                  <li>Use of outside courses on various legal topics</li>
+              </ul>
+          </div>
+  
+          <div class="articling-section" data-aos="fade-down">
+              <h3>Articling Support</h3>
+              <p>As an articling student, excessive trips out of the office can take away from your educational experience. Dickie & Lyman employs process servers, messengers, and legal assistants to allow you to focus on the more substantive areas of the practice of law. We also use the latest computer technology, with a robust computer network giving everyone (including the senior lawyers) Westlaw ECarswell, high-speed DSL internet access and personalized e-mail.</p>
+          </div>
+  
+          <div class="articling-section" data-aos="fade-down">
+              <h3>Community Involvement</h3>
+              <p>The lawyers at Dickie & Lyman have instructed at the Bar Admission Course, Carleton University, and the Faculty of Law of the University of Ottawa. We have written and presented material for various legal associations and organizations, and have been involved in City advisory committees and Task Forces.</p>
+          </div>
+  
+          <div class="articling-section grid-articling" data-aos="fade-up">
+              <h3>Affiliations</h3>
+              <div class="affiliations-grid">
+                  <div class="affiliation-box">
+                      <img src="assets/gaval-tax.png" alt="Landlord & Tenant Law">
+                      <h4>Landlord & Tenant Law</h4>
+                      <ul>
+                          <li>Eastern Ontario Landlord Organization (as an organizing and founding member)</li>
+                          <li>Federation of Rental-housing Providers of Ontario</li>
+                          <li>Ottawa Region Landlords Association</li>
+                          <li>Building Owners and Managers Association (Ottawa)</li>
+                          <li>Canadian Federation of Apartment Associations (as President)</li>
+                      </ul>
+                  </div>
+                  <div class="affiliation-box">
+                      <img src="assets/tax-office.png" alt="Municipal Tax Assessment">
+                      <h4>Municipal Tax Assessment</h4>
+                      <ul>
+                          <li>Building Owners and Managers Association (Ottawa) Property Tax Sub-committee (as an organizing and founding member)</li>
+                          <li>Canadian Property Tax Association</li>
+                      </ul>
+                  </div>
+                  <div class="affiliation-box">
+                      <img src="assets/professional.png" alt="Professional Affiliations">
+                      <h4>Professional</h4>
+                      <ul>
+                          <li>Canadian Bar Association</li>
+                          <li>County of Carleton Law Association</li>
+                          <li>Law Society of Upper Canada</li>
+                          <li>Ontario Bar Association</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <footer id="contact">
+   <div class="footer-container">
+       <div class="footer-section">
+           <h4>Location</h4>
+           <p>1600 Carling Ave., Suite 640<br>Ottawa, Ontario K1Z 1G3</p>
+           <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.460564764101!2d-75.74811402326807!3d45.37987943906007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce06bd3b155555%3A0xc0bcfd907c8ce560!2s1600%20Carling%20Ave%20Unit%20640%2C%20Ottawa%2C%20ON%20K2A%201C5!5e0!3m2!1sen!2sca!4v1720399254257!5m2!1sen!2sca" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+       </div>
+       <div class="footer-section">
+           <h4>Contact Us</h4>
+           <p><strong>By Mail:</strong><br>Dickie & Lyman Lawyers LLP<br>1600 Carling Ave., Suite 640<br>Ottawa, Ontario K1Z 1G3<br>Canada</p>
+           <p><strong>By Phone:</strong> (613) 235-0101</p>
+           <p><strong>By Fax:</strong> (613) 238-0101</p>
+       </div>
+   </div>
+</footer>
+
+
+
+  
 
 
       <!--=============== MAIN JS ===============-->
@@ -397,7 +612,5 @@
       <script src="https://unpkg.com/split-type"></script>
       <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
       <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
-
    </body>
 </html>

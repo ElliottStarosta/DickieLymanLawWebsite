@@ -1,0 +1,131 @@
+/* Base styles for the contact form container */
+.contact-form {
+  display: none; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: 20px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  width: 100%;
+  max-width: 100%;
+  background-color: red;
+  /* height: 100%; */
+  
+}
+
+.contact-form.active {
+  display: flex;
+  
+}
+
+
+/* Styling for the contact container */
+.contact-container {
+  min-height: calc(55vh - 45px);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* background-color: var(--accent-color); */
+  
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+/* Styling for the left section of the contact form */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.contact-left-title h2 {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.contact-left-title hr {
+  border: none;
+  width: 120px;
+  height: 5px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Styling for the input fields */
+.contact-inputs {
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: var(--primary-color);
+  border-radius: 50px;
+}
+
+.contact-left textarea {
+  height: auto;
+  min-height: 140px;
+  max-height: 500px; /* Cap at 500px */
+  padding-top: 15px;
+  border-radius: 20px;
+  resize: none; /* Disable the drag handle */
+  overflow-y: auto; /* Enable vertical scrollbar if content exceeds max height */
+}
+
+.contact-inputs:focus {
+  border: 2px solid var(--primary-color);
+}
+
+.contact-inputs::placeholder {
+  color: var(--black-500);
+}
+
+/* Styling for the submit button */
+.contact-left button {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: var(--accent-color);
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(270deg, var(--primary-color-light), var(--primary-color-lighten));
+  cursor: pointer;
+}
+
+.contact-left button i {
+  font-size: 20px;
+}
+
+/* Styling for the right section of the contact form */
+.contact-right img {
+  width: 500px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 900px) {
+  .contact-inputs {
+    width: 80vw;
+  }
+  .contact-right {
+    display: none;
+  }
+}

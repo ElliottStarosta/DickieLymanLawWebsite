@@ -124,10 +124,17 @@ a {
   transition: opacity .1s, transform .4s;
 }
 
+.nav__link.contact {
+  display: none;
+}
+.nav__link, .contact {
+  cursor: pointer;
+}
+
 .nav__close {
   opacity: 0;
 }
-.nav__link.contact {
+.contact {
   display: none;
 }
 
@@ -260,16 +267,23 @@ a {
     display: none;
   }
 
+  .nav__link.contact {
+    display: flex;
+  }
+
   .nav {
     max-width: 100%;
   }
   .nav__logo {
     margin-left: 10px;
   }
+
+  .nav__link {
+    color: var(--accent-color);
+  }
 }
 
 .nav__link {
-  color: var(--primary-color);
   font-weight: var(--font-semi-bold);
   padding: 1.25rem 1.5rem;
   display: flex;
@@ -367,6 +381,7 @@ a {
   .nav__logo {
     color: red;
   }
+
 }
 
 /* For large devices */
@@ -396,6 +411,8 @@ a {
     padding: 0;
     justify-content: initial;
     column-gap: .25rem;
+    color: var(--primary-color);
+
   }
 
   .dropdown__item, 

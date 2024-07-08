@@ -1,57 +1,31 @@
-.visuallyhidden {
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  opacity: 0;
-  
+.highlight {
+  background-color: rgba(227, 48, 49, 0.5);
+  color: var(--accent-color);
+  border: 3px solid var(--primary-color);
 }
 
-.card-pa {
-  background: whitesmoke;
-  width: calc(33.33% - 20px); /* Adjust width of each card */
-  max-width: 280px;
-  text-align: center;
-  padding: 1em;
-  margin-bottom: 20px;
-  color: rgba(0,0,0,.5);
-  transition: inherit;
-  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-  border-radius: 1em;
+
+.container-pa {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;  
 }
 
-.practice__areas-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  background-color: var(--secondary-color);
-}
-.practice__areas-h2 {
-  background-color: var(--secondary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.intro-text {
-  flex: 0 1 40%; /* Adjust width of intro text */
-}
-.container-pa h2 {
+.intro-text h2 {
   font-size: 36px;
   margin-bottom: 40px;
   position: relative;
   color: var(--accent-color);
-  padding: 1em 2em 1em 2em;
+  padding: 1em 2em;
   margin-top: 1em;
-  background: rgba(0,0,0,.3);
+  background: rgba(227,48,49, 0.9);
   text-align: center;
   color: white;
   border-radius: .2em;
   display: inline-block;
-  
 }
 
-.container-pa h2::after {
+.intro-text h2::after {
   content: '';
   display: block;
   width: 60px;
@@ -60,105 +34,111 @@
   margin: 10px auto 0;
 }
 
-.card-carousel {
-  --card-width: 80%;
-  --card-max-width: 280px;
-  --card-height: 350px;
-  --carousel-min-width: 600px;
-  z-index: 1;
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  height: var(--card-height);
-  min-width: var(--carousel-min-width);
-  transition: filter .3s ease;
-  flex: 0 1 55%; /* Adjust width of carousel */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-@media screen and (max-width: 640px) {
-  .card-carousel {
-    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
-  }
-}
-
-.card-carousel.smooth-return {
-  transition: all .2s ease;
-}
-
-.card-carousel .card-pa {
-  background: whitesmoke;
-  width: var(--card-width);
-  max-width: var(--card-max-width);
-  text-align: center;
-  padding: 1em;
-  min-width: 250px;
-  height: var(--card-height);
-  position: absolute;
-  margin: 0 auto;
-  color: rgba(0,0,0,.5);
-  transition: inherit;
-  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-  border-radius: 1em;
-  filter: brightness(.9);
+.practice__areas-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-.card-pa.highlight {
-  filter: brightness(1)
+.practice-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-
-.card-pa:nth-of-type(1) .image-container {
-    background-image: url("https://static.addtoany.com/images/dracaena-cinnabari.jpg");
-}
- 
-.card-pa:nth-of-type(2) .image-container {
-  background-image: url("https://www.w3schools.com/w3css/img_lights.jpg")
-}
-
-.card-pa:nth-of-type(3) .image-container {
-  background-image: url("https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
-}
-.card-pa:nth-of-type(4) .image-container {
-  background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
-}
-.card-pa:nth-of-type(5) .image-container {
-  background-image: url("https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg")
-}
-
-
-
-.image-container {
-  width: 8em;
-  height: 8em;
+.practice-card {
+  width: 25%;
+  margin: 20px 0;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.5s ease-in-out;
   position: relative;
-  background-size: cover;
-  margin-bottom: 2em;
-  border-radius: 100%;
-  padding: 1em;
-  -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
--moz-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+  flex: 2;
+  background-color: white;
+}
+
+
+
+.practice-card img {
+  width: 100%;
+  height: auto;
+}
+
+.practice-card h3 {
+  margin: 10px 0;
+  color: var(--primary-color);
+  font-family: var(--rubik);
+  margin-bottom: 1em;
+}
+
+.practice-card .full-description h3 {
+  margin: 10px 0;
+  color: rgba(227, 48, 49,1);
+  font-family: var(--rubik);
+}
+
+.practice-card .full-description h2{
+  margin: 1em 0;
+  color: var(--black-200);
+  font-family: var(--rubik);
   
 }
 
-.image-container::after {
-  content: "";
-  display: block;
-  width: 120%;
-  height: 120%;
-  border: solid 3px rgba(0,0,0,.1);
-  border-radius: 100%;
-  position: absolute;
-  top: calc(-10% - 3px);
-  left: calc(-10% - 3px);
+.practice-card h2 {
+  margin: 10px 0;
+  color: var(--primary-color);
+  font-family: var(--rubik);
 }
 
+.practice-card p {
+  margin: 10px 0;
+}
+
+.explore-more-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  width: auto;
+}
+
+.practice-card.expanded {
+  flex: 4;
+  width: 100%;
+}
+
+.full-description {
+  display: none;
+  opacity: 0;
+  margin-top: 10px;
+  text-align: left;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.deadlines ul,
+.tax-recoveries ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.deadlines ul ul,
+.tax-recoveries ul ul {
+  list-style-type: circle;
+  margin-left: 20px;
+}
+
+.deadlines ul li,
+.tax-recoveries ul li {
+  margin-bottom: 10px;
+}
+
+.deadlines ul ul li,
+.tax-recoveries ul ul li {
+  margin-bottom: 5px;
+}
+
+.practice-card a {
+  color: var(--primary-color);
+  text-decoration: none;
+}

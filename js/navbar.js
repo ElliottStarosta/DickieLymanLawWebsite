@@ -11,14 +11,6 @@ export const showMenu = (_toggleId, _navId) => {
   toggle.addEventListener('click', () => {
     // Add show-menu class to nav menu
     nav.classList.toggle('show-menu');
-    // Toggle position property of body element
-    if (nav.classList.contains('show-menu')) {
-      document.body.style.position = 'fixed';
-    } else {
-      document.body.style.position = '';
-    }
-    // Add show-icon to show and hide the menu icon
-    toggle.classList.toggle('show-icon');
   });
 };
 

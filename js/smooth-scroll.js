@@ -21,15 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function scrollToAnchor(anchor) {
     lenis.scrollTo(anchor);
-
-    // Add classes to <html> element during smooth scroll
-    document.documentElement.classList.add('lenis', 'lenis-scrolling', 'lenis-smooth');
-    console.log("Scrolling");
-
-    // Remove classes after scroll animation completes
-    setTimeout(() => {
-        document.documentElement.classList.remove('lenis-scrolling', 'lenis-smooth');
-    }, lenis.options.duration * 1000); // Duration in milliseconds
 }
 
 // Handle initial hash on page load
@@ -47,20 +38,40 @@ document.querySelectorAll('.dropdown__link').forEach(link => {
     link.addEventListener('click', function(event) {
         event.preventDefault();
         const text = link.textContent.trim();
-
+        
         if (text.includes('Articles & Publications')) {
             updateHashAndLog('articles-publications');
-            scrollToAnchor('#articles-publications'); 
-            setTimeout(() => {
-                scrollToAnchor('#articles-publications'); ;
-            }, 50);
-            
+            scrollToAnchor('#articles-publications');
         } else if (text.includes('Our Lawyers')) {
             updateHashAndLog('our-lawyers');
             scrollToAnchor('#our-lawyers');
-            setTimeout(() => {
-                scrollToAnchor('#our-lawyers'); ;
-            }, 50);
+        } else if (text.includes('Residential Tenancy Law')) {
+            updateHashAndLog('residential-tenancy-law');
+            scrollToAnchor('#residential-tenancy-law');
+        } else if (text.includes('Property Tax & Assessment Law')) {
+            updateHashAndLog('property-tax-assessment-law');
+            scrollToAnchor('#property-tax-assessment-law');
+        } else if (text.includes('Commercial Tenancy Law')) {
+            updateHashAndLog('commerical-tenacy-law');
+            scrollToAnchor('#commerical-tenacy-law');
+        } else if (text.includes('Government Relations')) {
+            updateHashAndLog('government-relations');
+            scrollToAnchor('#government-relations');
+        }
+    });
+});
+
+document.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const text = link.textContent.trim();   
+        
+        if (text.includes('Student Articling')) {
+            updateHashAndLog('student-articling');
+            scrollToAnchor('#student-articling');
+        } else if(text.includes('Contact Us')) {
+            updateHashAndLog('contact');
+            scrollToAnchor('#contact')
         }
     });
 });
@@ -71,11 +82,29 @@ document.addEventListener("DOMContentLoaded", function() {
     contactButton.addEventListener("click", function() {
         updateHashAndLog('contact');
         scrollToAnchor('#contact');
-        setTimeout(() => {
-            scrollToAnchor('#contact'); ;
-        }, 50);
+
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const contactButton = document.getElementById("practice-areas-btn");
+    contactButton.addEventListener("click", function() {
+        updateHashAndLog('practice-areas');
+        scrollToAnchor('#practice-areas');
+
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const contactButton = document.getElementById("logo");
+    contactButton.addEventListener("click", function() {
+        updateHashAndLog('home');
+        scrollToAnchor('#home');
+
+    });
+});
+
+
 
 // Event listener for individual lawyer links
 document.querySelectorAll('.dropdown__sublink').forEach(link => {
@@ -87,23 +116,16 @@ document.querySelectorAll('.dropdown__sublink').forEach(link => {
         if (text.includes('John W. Dickie')) {
             updateHashAndLog('lawyer-dickie');
             scrollToAnchor('#lawyer-dickie');
-            setTimeout(() => {
-                scrollToAnchor('#lawyer-dickie'); ;
-            }, 50);
         } else if (text.includes('S. David Lyman')) {
             updateHashAndLog('lawyer-lyman');
             scrollToAnchor('#lawyer-lyman');
-            setTimeout(() => {
-                scrollToAnchor('#lawyer-lyman'); ;
-            }, 50);
-            
         }
     });
 });
 
 function updateHashAndLog(hash) {
-    // Update hash in the URL
-    window.location.hash = hash;
+    // Update hash in the URL without scrolling
+    history.pushState(null, null, `#${hash}`);
     // Log to console
     console.log(`Clicked '${hash}'`);
 }
