@@ -45,18 +45,39 @@ document.querySelectorAll('.dropdown__link').forEach(link => {
         } else if (text.includes('Our Lawyers')) {
             updateHashAndLog('our-lawyers');
             scrollToAnchor('#our-lawyers');
+
+            
         } else if (text.includes('Residential Tenancy Law')) {
             updateHashAndLog('residential-tenancy-law');
             scrollToAnchor('#residential-tenancy-law');
+            
+            document.getElementById("residential-tenancy-law").classList.add("highlight");
+            setTimeout(function() {
+                document.getElementById("residential-tenancy-law").classList.remove("highlight");
+            }, 3000);
+            
         } else if (text.includes('Property Tax & Assessment Law')) {
             updateHashAndLog('property-tax-assessment-law');
             scrollToAnchor('#property-tax-assessment-law');
+            document.getElementById("property-tax-assessment-law").classList.add("highlight");
+            setTimeout(function() {
+                document.getElementById("property-tax-assessment-law").classList.remove("highlight");
+            }, 3000);
         } else if (text.includes('Commercial Tenancy Law')) {
             updateHashAndLog('commerical-tenacy-law');
             scrollToAnchor('#commerical-tenacy-law');
+            document.getElementById("commerical-tenacy-law").classList.add("highlight");
+            setTimeout(function() {
+                document.getElementById("commerical-tenacy-law").classList.remove("highlight");
+            }, 3000);
         } else if (text.includes('Government Relations')) {
             updateHashAndLog('government-relations');
             scrollToAnchor('#government-relations');
+            document.getElementById("government-relations").classList.add("highlight");
+            setTimeout(function() {
+                document.getElementById("government-relations").classList.remove("highlight");
+            }, 3000);
+            
         }
     });
 });

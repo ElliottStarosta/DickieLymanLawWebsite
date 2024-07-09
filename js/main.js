@@ -135,11 +135,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 500);
   }
 });
-document.addEventListener('DOMContentLoaded', (event) => {
-  const textarea = document.querySelector('.contact-left textarea');
-
-  textarea.addEventListener('input', () => {
-    textarea.style.height = 'auto'; // Reset the height
-    textarea.style.height = Math.min(textarea.scrollHeight, 250) + 'px'; // Set the height based on content, but cap at 500px
-  });
-});

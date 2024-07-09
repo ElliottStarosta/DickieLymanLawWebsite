@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 lenis.stop();
                 $(document).ready(function(){lenis.start();})
 
-                console.log('stop')
                 readMoreBtn.textContent = 'Read Less';
                 cardExtraContent.style.display = 'block'; 
                 console.log('start')
@@ -40,6 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 cardDescription.style.display = 'flex';
                 cardBanner.style.display = 'flex'; 
+                setTimeout(() => {
+                    lenis.scrollTo("#our-lawyers");
+                }, 10);
+                console.log('close');
+
             }
             
         });

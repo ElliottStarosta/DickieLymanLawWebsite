@@ -1,6 +1,6 @@
 .highlight {
   background-color: rgba(227, 48, 49, 0.5);
-  color: var(--accent-color);
+  /* color: var(--accent-color); */
   border: 3px solid var(--primary-color);
 }
 
@@ -56,7 +56,6 @@
   transition: all 0.5s ease-in-out;
   position: relative;
   flex: 2;
-  background-color: white;
 }
 
 
