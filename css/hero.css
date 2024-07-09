@@ -115,6 +115,10 @@
     transform: scale(1.05) rotate(-3deg);
 }
 
+.practice-areas-btn:active {
+    transform: scale(0.95) rotate(-3deg);;
+}
+
 @media screen and (max-width: 1550px) {
   
     .hero .container img {
