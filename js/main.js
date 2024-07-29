@@ -160,3 +160,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+function changeTextOnResize() {
+  const pElement = document.getElementById('hero-text-p');
+  if (window.innerWidth <= 768) {
+    pElement.textContent = 'We provide top-tier legal services as a trusted LLP. This site informs you about our services, ethos, and areas of expertise.';
+  } else {
+    pElement.textContent = 'We are committed to providing the highest standards of legal service as a trusted Limited Liability Partnership (LLP). The information on this site is designed to inform you about our comprehensive services, our firm’s ethos, and the diverse areas of law in which we specialize.';
+  }
+}
+
+// Run the function on initial load
+changeTextOnResize();
+
+// Add an event listener to run the function on window resize
+window.addEventListener('resize', changeTextOnResize);
+

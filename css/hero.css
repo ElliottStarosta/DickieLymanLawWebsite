@@ -185,13 +185,11 @@
 
 
     .hero p {
-        font-size: 1em;
         margin-bottom: 15px;
     }
 
     .hero .practice-areas-btn {
-        padding: 10px 20px;
-        font-size: 1em;
+        font-size: 12px;
         border-radius: 50px 50px 50px 50px;
         margin-bottom: 5vh;
     }
@@ -214,6 +212,33 @@
     .hero__right li {
         font-size: 1rem;
     }
+
+    
+
+    .typewrite {
+        font-size: 2rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 500px) {
+
+    .typewrite {
+        display: none;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .practice-areas-btn {
+        padding: 3px 60px;
+        font-size: 10px;
+        margin-bottom: 5vh;
+    }
+
+    
 }
 
 @media screen and (min-width: 1118px) {

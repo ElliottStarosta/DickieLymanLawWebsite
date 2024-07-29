@@ -89,3 +89,34 @@
 .article-content a:hover {
   color: var(--secondary-color);
 }
+
+@media (max-width: 600px) {
+  .article-item {
+    width: 450px;
+  }
+
+  .articles-publications h2 {
+    width: calc(100vw - 20px);
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .article-item {
+    width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .article-item {
+    width: 320px;
+  }
+}
+
+@media (max-width: 400px) {
+  .article-item {
+    width: 300px;
+  }
+}
+
+

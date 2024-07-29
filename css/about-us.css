@@ -429,40 +429,26 @@
 }
 
 
-@media (max-width: 600px) {
-    .card {
-        max-width: 100%;
-        width: 100%; 
-        padding: 5px; 
-    }
+@media (max-width: 650px) {
 
-    .card__banner img {
-        width: 60px; 
-        height: 60px;
+    .card__banner {
+        width: 160px; 
+        height: auto;
         margin-right: 10px; 
+        
     }
 
-    .card__banner .card__name {
-        font-size: 1.2rem; 
-    }
-
-    .card__description {
-        font-size: 0.9rem; 
-        margin-top: 10px; 
-    }
-
-    .card__extra-content {
-        padding: 15px; 
-    }
-
-    .extra-section h4 {
-        font-size: 1rem; 
-    }
-
-    .extra-section p,
-    .extra-section ul {
-        font-size: 0.85rem;
-    }
 }
 
+@media (max-width: 600px) {
+
+    .card__banner {
+        display: none;
+    }
+
+    .card__text {
+        padding: 10px;
+    }
+
+}
 
