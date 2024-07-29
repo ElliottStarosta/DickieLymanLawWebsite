@@ -17,6 +17,8 @@ AOS.init({
 });
 
 
+
+
 // Example usage: Initialize the showMenu function
 showMenu('nav-toggle', 'nav-menu');
 
@@ -80,58 +82,85 @@ window.addEventListener('scroll', function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  const exploreMoreBtns = document.querySelectorAll('.explore-more-btn');
-  let expandedCard = null;
 
-  exploreMoreBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      const card = this.parentElement;
 
-      if (expandedCard && expandedCard !== card) {
-        collapseCard(expandedCard);
-      }
+import Lenis from 'lenis';
 
-      if (card.classList.contains('expanded')) {
-        collapseCard(card);
-      } else {
-        expandCard(card);
-        expandedCard = card;
-      }
+document.addEventListener('DOMContentLoaded', () => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    const exploreMoreBtns = document.querySelectorAll('.explore-more-btn');
+    let expandedCard = null;
+    let expandedCardId = null;
+
+
+    exploreMoreBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const card = this.parentElement;
+
+        if (expandedCard && expandedCard !== card) {
+          collapseCard(expandedCard);
+        }
+
+        if (card.classList.contains('expanded')) {
+          collapseCard(card);
+        } else {
+          expandCard(card);
+          expandedCard = card;
+          expandedCardId = card.getAttribute('id');
+        }
+      });
     });
-  });
 
-  function expandCard(card) {
-    card.classList.add('expanded');
-    const shortDescription = card.querySelector('.short-description');
-    const fullDescription = card.querySelector('.full-description');
-    const exploreBtn = card.querySelector('.explore-more-btn');
+    function expandCard(card) {
+      card.classList.add('expanded');
+      const shortDescription = card.querySelector('.short-description');
+      const fullDescription = card.querySelector('.full-description');
+      const exploreBtn = card.querySelector('.explore-more-btn');
 
-    // Change button text to "Explore less"
-    exploreBtn.textContent = 'Explore less';
+      // Change button text to "Explore less"
+      exploreBtn.textContent = 'Explore less';
+      lenis.stop();
+      $(document).ready(function(){lenis.start();})
+      
 
-    // Hide short description and show full description
-    shortDescription.style.display = 'none';
-    fullDescription.style.display = 'block';
-    setTimeout(() => {
-      fullDescription.style.opacity = '1';
-    }, 10); // Slight delay to trigger transition
-  }
+      // Hide short description and show full description
+      shortDescription.style.display = 'none';
+      fullDescription.style.display = 'block';
+      setTimeout(() => {
+        fullDescription.style.opacity = '1';
+      }, 10); // Slight delay to trigger transition
+    }
 
-  function collapseCard(card) {
-    card.classList.remove('expanded');
-    const shortDescription = card.querySelector('.short-description');
-    const fullDescription = card.querySelector('.full-description');
-    const exploreBtn = card.querySelector('.explore-more-btn');
+    function collapseCard(card) {
+      card.classList.remove('expanded');
+      const shortDescription = card.querySelector('.short-description');
+      const fullDescription = card.querySelector('.full-description');
+      const exploreBtn = card.querySelector('.explore-more-btn');
 
-    // Change button text to "Explore more"
-    exploreBtn.textContent = 'Explore more';
+      // Change button text to "Explore more"
+      exploreBtn.textContent = 'Explore more';
 
-    // Hide full description and show short description
-    fullDescription.style.opacity = '0';
-    setTimeout(() => {
-      fullDescription.style.display = 'none';
-      shortDescription.style.display = 'block';
-    }, 500);
-  }
+      // Hide full description and show short description
+      fullDescription.style.opacity = '0';
+      setTimeout(() => {
+        fullDescription.style.display = 'none';
+        shortDescription.style.display = 'block';
+        
+        setTimeout(() => {
+            lenis.scrollTo(`#${expandedCardId}`);
+        }, 10);
+    
+        
+      }, 500);
+    }
+
+
 });

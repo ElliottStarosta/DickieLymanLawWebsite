@@ -3,7 +3,7 @@ footer {
   color: var(--primary-color);
   padding: 40px 0;
   font-family: Arial, sans-serif;
-  height: 625px;
+  min-height: calc(70vh - 20px);
   overflow: hidden;
 }
 
@@ -50,7 +50,7 @@ footer {
 @media (max-width: 768px) {
   .footer-container {
       flex-direction: column;
-      align-items: center;
+      align-items: stretch
   }
 
   .footer-section {

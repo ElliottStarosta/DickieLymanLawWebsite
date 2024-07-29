@@ -148,5 +148,5 @@ function updateHashAndLog(hash) {
     // Update hash in the URL without scrolling
     history.pushState(null, null, `#${hash}`);
     // Log to console
-    console.log(`Clicked '${hash}'`);
+    
 }

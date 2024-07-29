@@ -55,7 +55,7 @@
   text-align: center;
   transition: all 0.5s ease-in-out;
   position: relative;
-  flex: 2;
+  flex: 1;
 }
 
 .practice-card:hover {
@@ -107,7 +107,7 @@
 }
 
 .practice-card.expanded {
-  flex: 4;
+  flex: 3;
   width: 100%;
 }
 
@@ -145,4 +145,72 @@
 .practice-card a {
   color: var(--primary-color);
   text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+  .practice-cards {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .practice-card {
+    width: calc(100% - 40px);
+    flex: 1 1 100%;
+    max-width: 450px;
+  }
+}
+
+
+@media (max-width: 980px) {
+  .practice-cards {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .practice-card {
+    width: calc(100% - 40px);
+    flex: 1 1 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 780px) {
+  .practice-cards {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .practice-card {
+    width: calc(100% - 40px);
+    flex: 1 1 100%;
+    max-width: 300px;
+  }
+}
+
+
+@media (max-width: 660px) {
+
+  .practice-cards {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .practice-card {
+    width: calc(100% - 40px);
+    flex: 1 1 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .practice-cards {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .practice-card {
+    width: calc(100% - 40px);
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
