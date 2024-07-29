@@ -171,10 +171,19 @@
     position: relative; 
 }
 
-.card__extra-content {
+/* .card__extra-content {
     display: none;
     transition: height 0.3s ease; 
+} */
+
+.card__extra-content {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 3s ease, opacity 0.3s ease;
 }
+
+
 
 .card__description::after {
     content: '';
