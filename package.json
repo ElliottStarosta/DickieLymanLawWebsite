@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.3.1"
+    "vite": "^5.3.5"
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",

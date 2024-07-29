@@ -40,10 +40,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.body.appendChild(css);
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    var button = document.querySelector('.practice-areas-btn');
-    button.classList.add('visible'); 
-});
 
 
 let scrollPosition = 0;

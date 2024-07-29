@@ -203,10 +203,13 @@
     margin-bottom: 1rem;
     line-height: 1.5;
     text-transform: uppercase;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    /* Transition properties for smoother hover effects */
+    transition: background-color 0.3s ease-in-out, 
+                color 0.3s ease-in-out, 
+                opacity 0.3s ease-in-out, 
+                box-shadow 0.3s ease-in-out, 
+                transform 0.3s ease-in-out;
     z-index: 1;
-
-
 }
 
 .read-more:hover {
@@ -219,7 +222,8 @@
 
 .read-more:active {
     transform: scale(0.95) rotate(-3deg);
-  }
+}
+
 
 
 .read-more span {
