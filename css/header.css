@@ -195,7 +195,7 @@ a {
 
 @media screen and (max-width: 1200px) and (min-width: 1160px) {
   .nav__logo .name {
-    font-size: 20px;
+    /* font-size: 20px; */
     margin-right: 4rem;
   }
   
@@ -203,23 +203,25 @@ a {
 
 @media screen and (max-width: 1160px){
   .nav__logo .name {
-    font-size: 20px;
+    font-size: 23px;
     margin-right: 4rem;
   }
-  
-  .nav__link {
-    font-size: 12px;
+
+  .nav__link:nth-child(3) {
+    margin-right: 50px;
   }
+  
 
   .nav__contact button {
     font-size: 12px;
-    padding: 2px 24px;
+    padding: 5px 25px;
+    font-weight: 800;
 
   }
   
 }
 /* Navigation for mobile devices */
-@media screen and (max-width: 1118px) {
+@media screen and (max-width: 1200px) {
   .nav__menu {
     position: absolute;
     left: 0;
@@ -379,14 +381,11 @@ a {
   .container {
     margin-inline: auto;
   }
-  .nav__logo {
-    color: red;
-  }
-
+  
 }
 
 /* For large devices */
-@media screen and (min-width: 1118px) {
+@media screen and (min-width: 1200px) {
   .container {
     margin-inline: auto;
   }
@@ -475,3 +474,4 @@ a {
 
   }
 }
+

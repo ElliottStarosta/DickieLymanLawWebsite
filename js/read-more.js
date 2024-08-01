@@ -36,14 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         readMoreBtn.textContent = 'Read Less';
                         cardExtraContent.style.display = 'block';
 
-                        // Calculate the height dynamically
-                        const contentHeight = cardExtraContent.scrollHeight - 100;
+                    
 
                         // Adjust height for specific card ID if present
                         if (cardId === 'lawyer-lyman') {
-                            cardExtraContent.style.height = `${contentHeight - 100}px`;
+                            cardExtraContent.style.height = "auto";
                         } else {
-                            cardExtraContent.style.height = `${contentHeight}px`;
+                            cardExtraContent.style.height = "auto";
                         }
 
                         cardExtraContent.style.opacity = '1';
@@ -56,8 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         cardExtraContent.style.opacity = '0';
 
                         cardDescription.style.display = 'flex';
-                        cardBanner.style.display = 'flex'; 
                         
+                        if (window.innerWidth > 650) {
+                            cardBanner.style.display = 'flex';
+                        } else {
+                            cardBanner.style.display = 'none';
+                        }                        
                         // Reset display after transition
                         setTimeout(() => {
                             cardExtraContent.style.display = 'none';

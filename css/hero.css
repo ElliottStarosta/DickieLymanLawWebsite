@@ -4,7 +4,8 @@
     min-height: calc(100vh - 45px);
     background-image: linear-gradient(rgba(75, 131, 183, 0.45), rgba(9, 0, 77, 0.65)), url(../assets/herobackground.png);
     background-size: cover;
-    background-position: right center;
+    /* background-position: right center; */
+    background-position: center;
     padding: 10px 8%;
     display: flex;
     align-items: center;
@@ -40,13 +41,14 @@
 }
 
 
-.hero .container img {
+.hero .container .hero-img {
     width: 100%;
     max-width: 700px;
     height: auto;
     flex: 1;
     position: relative; /* Ensure img remains in document flow for correct stacking */
     z-index: 2; /* Place img above svg */
+    filter: drop-shadow(0px -5px 5px rgba(0, 0, 0, 0.5));
 }
 
 .hero-text {
@@ -73,13 +75,13 @@
 .hero-text p {
     font-size: 1.4rem;
     margin-top: 12px;
-    margin-bottom: 24px;
     font-family: var(--raleway);
     font-weight: 700;
     line-height: 2.2rem;
     color: var(--accent-color);
     opacity: 0.8;
-}
+} 
+
 
 .practice-areas-btn {
     background-color: #e33031;
@@ -94,7 +96,7 @@
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    margin: 8px;
+    margin: 20px 0px 0px 0px;
     transition: transform 0.3s ease, box-shadow 0.5s ease-in-out, opacity 0.5s ease;
     border: 0;
     font-size: 18px;
@@ -120,7 +122,7 @@
 
 @media screen and (max-width: 1550px) {
   
-    .hero .container img {
+    .hero .container .hero-img {
         max-width: 600px;
     }
 }
@@ -129,7 +131,7 @@
     .typewrite {
         font-size: 2.2rem;
     }
-    .hero .container img {
+    .hero .container .hero-img {
         max-width: 550px;
     }
 
@@ -144,7 +146,7 @@
 }
 @media screen and (max-width: 1475px) {
    
-    .hero .container img {
+    .hero .container .hero-img {
         max-width: 500px;
     }
 }
@@ -153,7 +155,7 @@
     .typewrite {
         font-size: 2rem;
     }
-    .hero .container img {
+    .hero .container .hero-img {
         max-width:500px;
     }
 
@@ -169,7 +171,7 @@
         min-height: calc(100vh - 35px);
     }
 
-    .hero .container img {
+    .hero .container .hero-img {
         width: 100%;
         margin-top: calc(10vh + 10px);
         display: none;
@@ -185,13 +187,14 @@
 
 
     .hero p {
-        margin-bottom: 15px;
+        margin-bottom: 35px;
     }
 
     .hero .practice-areas-btn {
-        font-size: 12px;
+        font-weight: 700;
         border-radius: 50px 50px 50px 50px;
         margin-bottom: 5vh;
+        margin-top: 0;
     }
 }
 
@@ -222,21 +225,31 @@
     
 }
 
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 700px) {
 
     .typewrite {
         display: none;
     }
+
+
+
+    
+}
+@media screen and (max-width: 500px) {
+
+    
 
     .hero-text p {
         font-size: 18px;
     }
 
     .practice-areas-btn {
-        padding: 3px 60px;
-        font-size: 10px;
+        font-size: 13px;
+        padding: 15px 15px;
         margin-bottom: 5vh;
     }
+
 
     
 }
@@ -246,3 +259,4 @@
         background-position: center 35%;
     }
 }
+

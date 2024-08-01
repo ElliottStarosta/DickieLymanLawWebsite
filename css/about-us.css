@@ -43,6 +43,8 @@
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
+    filter: drop-shadow(0px -5px 5px rgba(0, 0, 0, 0.5));
+
 }
 
 .col-left p {
@@ -429,18 +431,8 @@
 }
 
 
+
 @media (max-width: 650px) {
-
-    .card__banner {
-        width: 160px; 
-        height: auto;
-        margin-right: 10px; 
-        
-    }
-
-}
-
-@media (max-width: 600px) {
 
     .card__banner {
         display: none;
@@ -452,3 +444,8 @@
 
 }
 
+@media (max-width: 1050px) {
+    .col-right {
+       display: none;
+    }
+}

@@ -36,7 +36,35 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // Inject CSS for typewriter effect
     const css = document.createElement("style");
     css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid var(--secondary-color)}";
+    css.innerHTML = `
+        .typewrite > .wrap {
+          border-right: 0.08em solid var(--secondary-color);
+        }
+        .typewrite > .wrap.blink {
+          animation: blink 2s infinite;
+          animation-delay: 1s;
+        }
+        @keyframes blink {
+          0% {
+          border-right: 0.08em solid var(--secondary-color);
+        }
+        20% {
+          border-right: 0.08em solid var(--secondary-color);
+        }
+        40% {
+          border-right: 0.08em solid var(--accent-color);
+        }
+        60% {
+          border-right: 0.08em solid var(--accent-color);
+        }
+        80% {
+          border-right: 0.08em solid var(--secondary-color);
+        }
+        100% {
+          border-right: 0.08em solid var(--secondary-color);
+        }
+        }
+      `;
     document.body.appendChild(css);
 });
 
@@ -162,17 +190,52 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function changeTextOnResize() {
+  const heroTextContent = document.querySelector('.hero-text-content');
   const pElement = document.getElementById('hero-text-p');
-  if (window.innerWidth <= 768) {
-    pElement.textContent = 'We provide top-tier legal services as a trusted LLP. This site informs you about our services, ethos, and areas of expertise.';
+
+  // Check if the logo image already exists
+  let logoElement = document.getElementById('hero-text-logo');
+
+  // Update the paragraph text and logo image based on the window width
+  if (window.innerWidth <= 700) {
+    if (!logoElement) {
+
+      // Create and insert the logo image if it doesn't exist
+      logoElement = document.createElement('img');
+      logoElement.setAttribute('data-aos', 'fade-down');
+      logoElement.id = 'hero-text-logo';
+      logoElement.src = '/assets/logo.png'; // Replace with the path to your logo image
+      logoElement.alt = 'Dickie & Lyman Logo';
+      heroTextContent.insertBefore(logoElement, pElement);
+
+      logoElement.style.width = '450px';
+      logoElement.style.margin = '20px 0';
+    }
+    if (window.innerWidth <= 330) {
+      logoElement.style.width = '205px';
+    } else if (window.innerWidth <= 350) {
+      logoElement.style.width = '225px';
+    } else if (window.innerWidth <= 410) {
+      logoElement.style.width = '235px';
+    } else if (window.innerWidth <= 480) {
+      logoElement.style.width = '300px';
+    } else if (window.innerWidth <= 570) {
+      logoElement.style.width = '375px';
+    }
+    
+
+    pElement.textContent = '';
   } else {
+    if (logoElement) {
+      // Remove the logo image if it exists
+      logoElement.remove();
+    }
     pElement.textContent = 'We are committed to providing the highest standards of legal service as a trusted Limited Liability Partnership (LLP). The information on this site is designed to inform you about our comprehensive services, our firm’s ethos, and the diverse areas of law in which we specialize.';
   }
 }
 
-// Run the function on initial load
+// Call the function initially to set the correct text on page load
 changeTextOnResize();
 
-// Add an event listener to run the function on window resize
+// Add an event listener to call the function on window resize
 window.addEventListener('resize', changeTextOnResize);
-
