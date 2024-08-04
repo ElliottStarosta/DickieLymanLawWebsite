@@ -12,6 +12,8 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     $(document).ready(function() {
         lenis.start();

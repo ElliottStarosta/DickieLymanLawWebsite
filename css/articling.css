@@ -22,7 +22,9 @@
 
 .articling__logo img {
   width: 400px;
-  height: auto; /* Set a height if needed */
+  height: auto;
+  filter: drop-shadow(0px -2px 4px rgba(0, 0, 0, 0.5));
+
 }
 
 .articling__logo {

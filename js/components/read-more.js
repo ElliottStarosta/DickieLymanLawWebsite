@@ -1,12 +1,18 @@
 import Lenis from 'lenis';
 
-document.addEventListener('DOMContentLoaded', () => {
-    const lenis = new Lenis();
+const lenis = new Lenis({
+    duration: 1.5, // Set duration to 1.5 seconds for smoother and slower scroll
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function for smoothness
+});
 
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+document.addEventListener('DOMContentLoaded', () => {
 
     requestAnimationFrame(raf);
 
@@ -65,13 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         setTimeout(() => {
                             cardExtraContent.style.display = 'none';
                             lenis.scrollTo("#our-lawyers");
-                        }, 300); // Match the transition duration
+                        }, 450);
                     }
                 } else {
                     console.warn('One or more elements are missing within the card content.');
                 }
-            } else {
-                console.warn('Card not found for read-more button.');
             }
         });
     });
