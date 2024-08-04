@@ -9,7 +9,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: var(--accent-color);
+  background-color: #f5f5f5f5;
   box-shadow: 2px -3px 20px rgba(0, 0, 0,0.3);
   border-radius: 8px;
 }
@@ -19,6 +19,24 @@
   padding: 20px;
   border-radius: 8px;
 }
+
+.articling__logo img {
+  width: 400px;
+  height: auto; /* Set a height if needed */
+}
+
+.articling__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+
+
+  max-width: 100%;
+  max-height: 100%;
+  width: auto; /* Ensures the image maintains its aspect ratio */
+  height: auto; /* Ensures the image maintains its aspect ratio */
+}
+
 
 .articling-section img {
   max-width: 100%;
@@ -50,7 +68,7 @@
 }
 
 .articling-container p, .articling-container ul, .articling-container li {
-  color: #666;
+  color: var(--black-100);
   font-size: 16px;
   line-height: 1.6;
 }
@@ -74,6 +92,7 @@
   font-size: 18px;
   text-align: center;
   margin-bottom: 30px;
+  color: var(--black-500);
 }
 
 .affiliations-grid {
@@ -125,5 +144,11 @@
 
   .affiliation-box:nth-child(3) {
     grid-column: span 1; 
+  }
+}
+
+@media (max-width: 500px) {
+  .articling__logo img {
+    width: 300px;
   }
 }

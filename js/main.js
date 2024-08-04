@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 
 AOS.init({
     duration: 2000,
-    once: false,
+    once: true,
     debounceDelay: 2000,
 });
 

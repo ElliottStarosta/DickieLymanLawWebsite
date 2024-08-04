@@ -18,9 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
         handleInitialHash();
     });
 });
+const toggle = document.getElementById("nav-toggle");
 
 function scrollToAnchor(anchor) {
+    
     lenis.scrollTo(anchor);
+    toggle.classList.toggle('show-icon');
+    
 }
 
 // Handle initial hash on page load
