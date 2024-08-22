@@ -16,6 +16,12 @@ html {
     overflow-x: hidden;
 }
 
+html::before {
+    content: "";
+    display: block;
+    height: 1px;
+}
+
 :root {
     --rubik: 'Rubik', sans-serif;
     --poppins: 'Poppins', sans-serif;
@@ -23,7 +29,7 @@ html {
     --mukta: 'Mukta', sans-serif;
 
     --primary-color: #00274d;
-    --secondary-color: rgb(227, 48, 49);
+    --secondary-color: #e33031;
     --accent-color: #f5f5f5;
 
     --black-200: #020202;

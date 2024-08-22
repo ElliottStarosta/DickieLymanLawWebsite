@@ -18,20 +18,20 @@ AOS.init({
 initLenis();
 
 // Set the default hash on window load
-window.onload = function() {
-  const toggle = document.getElementById("nav-toggle");
+window.onload = function () {
+    const toggle = document.getElementById("nav-toggle");
 
     if (window.location.hash !== "#home") {
-      window.location.replace(window.location.pathname + "#home");
-      setTimeout(() => {
-        lenis.scrollTo('#home');
-      }, 100);
+        window.location.replace(window.location.pathname + "#home");
+        setTimeout(() => {
+            lenis.scrollTo('#home');
+        }, 100);
     }
 
     setTimeout(() => {
-      toggle.className = 'nav__toggle';
-      console.log("removed");
-    }, 50);
+        toggle.className = 'nav__toggle';
+        console.log("removed");
+    }, 75);
 };
 
 // Initialize the showMenu function
@@ -53,19 +53,19 @@ window.addEventListener('DOMContentLoaded', () => {
     css.type = "text/css";
     css.innerHTML = `
         .typewrite > .wrap {
-          border-right: 0.08em solid var(--secondary-color);
+            border-right: 0.08em solid var(--secondary-color);
         }
         .typewrite > .wrap.blink {
-          animation: blink 2s infinite;
-          animation-delay: 1s;
+            animation: blink 2s infinite;
+            animation-delay: 1s;
         }
         @keyframes blink {
-          0% { border-right: 0.08em solid var(--secondary-color); }
-          20% { border-right: 0.08em solid var(--secondary-color); }
-          40% { border-right: 0.08em solid var(--accent-color); }
-          60% { border-right: 0.08em solid var(--accent-color); }
-          80% { border-right: 0.08em solid var(--secondary-color); }
-          100% { border-right: 0.08em solid var(--secondary-color); }
+            0% { border-right: 0.08em solid var(--secondary-color); }
+            20% { border-right: 0.08em solid var(--secondary-color); }
+            40% { border-right: 0.08em solid var(--accent-color); }
+            60% { border-right: 0.08em solid var(--accent-color); }
+            80% { border-right: 0.08em solid var(--secondary-color); }
+            100% { border-right: 0.08em solid var(--secondary-color); }
         }
     `;
     document.body.appendChild(css);
@@ -86,7 +86,7 @@ function updateParallax() {
     document.querySelector('.container').style.transform = 'translateY(' + scrollPosition * 0.3 + 'px)';
 
     // Applying parallax effect to the .container img
-    document.querySelector('.container img').style.transform = 'translateY(' + scrollPosition * 0.-3 + 'px)';
+    document.querySelector('.container img').style.transform = 'translateY(' + scrollPosition * 0. - 3 + 'px)';
     // Change z-index of .hero-text based on scroll position
     const textElement = document.querySelector('.hero-text');
     if (scrollPosition > 100) {
@@ -108,75 +108,75 @@ window.addEventListener('scroll', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-  const exploreMoreBtns = document.querySelectorAll('.explore-more-btn');
-  let expandedCard = null;
-  let expandedCardId = null;
 
-  exploreMoreBtns.forEach(btn => {
-      btn.addEventListener('click', function() {
-          const card = this.parentElement;
+    const exploreMoreBtns = document.querySelectorAll('.explore-more-btn');
+    let expandedCard = null;
+    let expandedCardId = null;
 
-          if (expandedCard && expandedCard !== card) {
-              collapseCard(expandedCard);
-          }
+    exploreMoreBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const card = this.parentElement;
 
-          if (card.classList.contains('expanded')) {
-              collapseCard(card);
-          } else {
-              expandCard(card);
-              expandedCard = card;
-              expandedCardId = card.getAttribute('id');
-          }
-      });
-  });
+            if (expandedCard && expandedCard !== card) {
+                collapseCard(expandedCard);
+            }
 
-  function expandCard(card) {
-      card.classList.add('expanded');
-      const shortDescription = card.querySelector('.short-description');
-      const fullDescription = card.querySelector('.full-description');
-      const exploreBtn = card.querySelector('.explore-more-btn');
+            if (card.classList.contains('expanded')) {
+                collapseCard(card);
+            } else {
+                expandCard(card);
+                expandedCard = card;
+                expandedCardId = card.getAttribute('id');
+            }
+        });
+    });
 
-      // Change button text to "Explore less"
-      exploreBtn.textContent = 'Explore less';
+    function expandCard(card) {
+        card.classList.add('expanded');
+        const shortDescription = card.querySelector('.short-description');
+        const fullDescription = card.querySelector('.full-description');
+        const exploreBtn = card.querySelector('.explore-more-btn');
 
-      // Ensure lenis is initialized or available in the global scope
-      if (typeof lenis !== 'undefined') {
-          lenis.stop();
-          $(document).ready(() => {
-              lenis.start();
-          });
-      }
+        // Change button text to "Explore less"
+        exploreBtn.textContent = 'Explore less';
 
-      // Hide short description and show full description
-      shortDescription.style.display = 'none';
-      fullDescription.style.display = 'block';
-      setTimeout(() => {
-          fullDescription.style.opacity = '1';
-      }, 10); // Slight delay to trigger transition
-  }
+        // Ensure lenis is initialized or available in the global scope
+        if (typeof lenis !== 'undefined') {
+            lenis.stop();
+            $(document).ready(() => {
+                lenis.start();
+            });
+        }
 
-  function collapseCard(card) {
-      card.classList.remove('expanded');
-      const shortDescription = card.querySelector('.short-description');
-      const fullDescription = card.querySelector('.full-description');
-      const exploreBtn = card.querySelector('.explore-more-btn');
+        // Hide short description and show full description
+        shortDescription.style.display = 'none';
+        fullDescription.style.display = 'block';
+        setTimeout(() => {
+            fullDescription.style.opacity = '1';
+        }, 10); // Slight delay to trigger transition
+    }
 
-      // Change button text to "Explore more"
-      exploreBtn.textContent = 'Explore more';
+    function collapseCard(card) {
+        card.classList.remove('expanded');
+        const shortDescription = card.querySelector('.short-description');
+        const fullDescription = card.querySelector('.full-description');
+        const exploreBtn = card.querySelector('.explore-more-btn');
 
-      // Hide full description and show short description
-      fullDescription.style.opacity = '0';
-      setTimeout(() => {
-          fullDescription.style.display = 'none';
-          shortDescription.style.display = 'block';
+        // Change button text to "Explore more"
+        exploreBtn.textContent = 'Explore more';
 
-          if (expandedCardId) {
-              // Use template literals for the ID
-              lenis.scrollTo(`#${expandedCardId}`);
-          }
-      }, 500); // Match this delay with the transition duration if needed
-  }
+        // Hide full description and show short description
+        fullDescription.style.opacity = '0';
+        setTimeout(() => {
+            fullDescription.style.display = 'none';
+            shortDescription.style.display = 'block';
+
+            if (expandedCardId) {
+                // Use template literals for the ID
+                lenis.scrollTo(`#${expandedCardId}`);
+            }
+        }, 500); // Match this delay with the transition duration if needed
+    }
 
 });
 
@@ -229,7 +229,7 @@ changeTextOnResize();
 window.addEventListener('resize', changeTextOnResize);
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Create a new IntersectionObserver
     let observer = new IntersectionObserver((entries, observer) => {
         // Loop through the entries (observed elements)
@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 observer.unobserve(img); // Stop observing the image
             }
         });
-    }, { 
+    }, {
         rootMargin: '0px 0px 50px 0px', // Load images just before they enter the viewport
         threshold: 0.1 // Trigger when 10% of the image is visible
     });
