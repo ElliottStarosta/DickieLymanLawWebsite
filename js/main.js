@@ -227,3 +227,27 @@ changeTextOnResize();
 
 // Add an event listener to call the function on window resize
 window.addEventListener('resize', changeTextOnResize);
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Create a new IntersectionObserver
+    let observer = new IntersectionObserver((entries, observer) => {
+        // Loop through the entries (observed elements)
+        entries.forEach(entry => {
+            // Check if the element is in the viewport
+            if (entry.isIntersecting) {
+                let img = entry.target; // Get the image element
+                img.src = img.dataset.src; // Replace src with data-src
+                observer.unobserve(img); // Stop observing the image
+            }
+        });
+    }, { 
+        rootMargin: '0px 0px 50px 0px', // Load images just before they enter the viewport
+        threshold: 0.1 // Trigger when 10% of the image is visible
+    });
+
+    // Observe each image with the 'data-src' attribute
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        observer.observe(img); // Start observing each image
+    });
+});
