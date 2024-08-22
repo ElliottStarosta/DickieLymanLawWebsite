@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 
 
-@import url(header.css);
-@import url(hero.css);
-@import url(about-us.css);
-@import url(practice-areas.css);
-@import url(articles.css);
-@import url(articling.css);
-@import url(contact.css);
-@import url(footer.css);
+@import url('/css/header.css');
+@import url('/css/hero.css');
+@import url('/css/about-us.css');
+@import url('/css/practice-areas.css');
+@import url('/css/articles.css');
+@import url('/css/articling.css');
+@import url('/css/contact.css');
+@import url('/css/footer.css');
 
 html {
     width: 100%;
