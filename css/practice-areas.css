@@ -1,14 +1,7 @@
-.highlight {
-  background-color: rgba(227, 48, 49, 0.5);
-  /* color: var(--accent-color); */
-  border: 3px solid var(--primary-color);
-}
-
-
 .container-pa {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;  
+  padding: 20px;
 }
 
 .intro-text h2 {
@@ -18,12 +11,12 @@
   color: var(--accent-color);
   padding: 1em 2em;
   margin-top: 1em;
-  background: rgba(227,48,49, 0.9);
+  background: rgba(227, 48, 49, 0.9);
   text-align: center;
   color: white;
   border-radius: .2em;
   display: inline-block;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
 
 }
@@ -36,6 +29,8 @@
   background-color: var(--primary-color);
   margin: 10px auto 0;
 }
+
+/*========== Cards ==========*/
 
 .practice__areas-flex {
   display: flex;
@@ -62,10 +57,9 @@
 }
 
 .practice-card:hover {
-  transform: translateY(-10px); 
+  transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 
 
 .practice-card img {
@@ -73,7 +67,7 @@
   height: auto;
   filter: drop-shadow(0px -2px 4px rgba(0, 0, 0, 0.5));
 
-  
+
 }
 
 .practice-card h3 {
@@ -85,15 +79,15 @@
 
 .practice-card .full-description h3 {
   margin: 10px 0;
-  color: rgba(227, 48, 49,1);
+  color: rgba(227, 48, 49, 1);
   font-family: var(--rubik);
 }
 
-.practice-card .full-description h2{
+.practice-card .full-description h2 {
   margin: 1em 0;
   color: var(--black-200);
   font-family: var(--rubik);
-  
+
 }
 
 .practice-card h2 {
@@ -106,11 +100,25 @@
   margin: 10px 0;
 }
 
+
+
+
+.highlight {
+  background-color: rgba(227, 48, 49, 0.5);
+  border: 3px solid var(--primary-color);
+}
+
+
+
+/*========== Buttons ==========*/
+
 .explore-more-btn {
   padding: 10px 20px;
   cursor: pointer;
   width: auto;
 }
+
+/*========== Expanded Card ==========*/
 
 .practice-card.expanded {
   flex: 3;
@@ -124,7 +132,6 @@
   text-align: left;
   transition: opacity 0.5s ease-in-out;
 }
-
 
 .deadlines ul,
 .tax-recoveries ul {
@@ -153,11 +160,14 @@
   text-decoration: none;
 }
 
+/*========== Media Queries ==========*/
+
 @media (max-width: 1000px) {
   .practice-cards {
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .practice-card {
     width: calc(100% - 40px);
     flex: 1 1 100%;
@@ -171,7 +181,7 @@
     justify-content: center;
     flex-wrap: wrap;
   }
-  
+
   .practice-card {
     width: calc(100% - 40px);
     flex: 1 1 100%;

@@ -1,4 +1,4 @@
-/*=============== VARIABLES CSS ===============*/
+/*=============== Header VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
@@ -7,7 +7,6 @@
   --body-color: hsl(220, 100%, 97%);
 
   /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --normal-font-size: .938rem;
 
   /*========== Font weight ==========*/
@@ -21,24 +20,6 @@
 }
 
 
-
-/*========== Responsive typography ==========*/
-@media screen and (min-width: 1024px) {
-  :root {
-    --normal-font-size: 1rem;
-  }
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-/*=============== REUSABLE CSS CLASSES ===============*/
-
 /*=============== HEADER ===============*/
 .header {
   position: fixed;
@@ -47,7 +28,7 @@ a {
   width: 100%;
   max-width: 100%;
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
-  background-color: rgba(255,255,255,0.25);
+  background-color: rgba(255, 255, 255, 0.25);
   z-index: 1000;
   transition: transform 0.5s ease-in-out;
   backdrop-filter: blur(8px);
@@ -69,8 +50,8 @@ a {
   z-index: 2;
 }
 
-.nav__logo, 
-.nav__burger, 
+.nav__logo,
+.nav__burger,
 .nav__close {
   color: var(--white-color);
 }
@@ -86,19 +67,19 @@ a {
   display: inline-block;
   text-decoration: none;
   color: var(--secondary-color);
-  transition: all 0.5s ease; 
+  transition: all 0.5s ease;
   font-family: var(--mukta);
 }
 
 .nav__logo:hover {
-  color: var(--accent-color); 
+  color: var(--accent-color);
   text-shadow: 0px 00px 6px var(--black-200);
-  
+
 }
 
 .nav__logo .name {
   font-size: 36px;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .nav__logo .name span {
@@ -115,7 +96,7 @@ a {
 
 }
 
-.nav__burger, 
+.nav__burger,
 .nav__close {
   position: absolute;
   width: max-content;
@@ -131,20 +112,22 @@ a {
 .nav__link.contact {
   display: none;
 }
-.nav__link, .contact {
+
+.nav__link,
+.contact {
   cursor: pointer;
 }
 
 .nav__close {
   opacity: 0;
 }
+
 .contact {
   display: none;
 }
 
 .nav__contact button {
   animation: 1.5s ease infinite alternate running shimmer;
-  /* background: linear-gradient(90deg, #FFE27D 0%, #64E3FF 30%, #9192FF 85%); */
   background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-color-light) 30%, var(--primary-color-lighten) 85%);
   background-size: 200% 100%;
   border: none;
@@ -184,27 +167,29 @@ a {
   transform: scale(0.95) rotate(-3deg);
 }
 
-@media screen and (max-width: 1315px){
+
+/*=============== Media Queries ===============*/
+
+@media screen and (max-width: 1315px) {
   .nav__logo .name {
     font-size: 24px;
     margin-right: 4rem;
   }
-  
+
   .nav__logo .name span {
     font-size: 12px;
   }
-  
+
 }
 
 @media screen and (max-width: 1200px) and (min-width: 1160px) {
   .nav__logo .name {
-    /* font-size: 20px; */
     margin-right: 4rem;
   }
-  
+
 }
 
-@media screen and (max-width: 1160px){
+@media screen and (max-width: 1160px) {
   .nav__logo .name {
     font-size: 23px;
     margin-right: 4rem;
@@ -213,7 +198,7 @@ a {
   .nav__link:nth-child(3) {
     margin-right: 50px;
   }
-  
+
 
   .nav__contact button {
     font-size: 12px;
@@ -221,9 +206,9 @@ a {
     font-weight: 800;
 
   }
-  
+
 }
-/* Navigation for mobile devices */
+
 @media screen and (max-width: 1200px) {
   .nav__menu {
     position: absolute;
@@ -236,14 +221,16 @@ a {
     opacity: 0;
     transition: top .4s, opacity .3s;
   }
+
   .nav__menu::-webkit-scrollbar {
     width: 0;
   }
+
   .nav__list {
     background-color: var(--primary-color);
   }
 
-  .dropdown__menu, 
+  .dropdown__menu,
   .dropdown__submenu {
     max-height: 0;
     overflow: hidden;
@@ -252,9 +239,8 @@ a {
     transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
   }
 
-  /* Show submenus on hover */
-  .dropdown__item:hover .dropdown__menu, 
-  .dropdown__subitem:hover > .dropdown__submenu {
+  .dropdown__item:hover .dropdown__menu,
+  .dropdown__subitem:hover>.dropdown__submenu {
     max-height: 1000px;
     opacity: 1;
     visibility: visible;
@@ -280,6 +266,7 @@ a {
   .nav {
     max-width: 100%;
   }
+
   .nav__logo {
     margin-left: 10px;
   }
@@ -297,18 +284,17 @@ a {
   align-items: center;
 }
 
-/* Show menu */
 .show-menu {
   opacity: 1;
   top: 3.5rem;
   pointer-events: initial;
 }
 
-/* Show icon */
 .show-icon .nav__burger {
   opacity: 0;
   transform: rotate(90deg);
 }
+
 .show-icon .nav__close {
   opacity: 1;
   transform: rotate(90deg);
@@ -326,7 +312,7 @@ a {
   transition: transform .4s;
 }
 
-.dropdown__link, 
+.dropdown__link,
 .dropdown__sublink {
   padding: 1.25rem 1.25rem 1.25rem 2.5rem;
   color: var(--white-color);
@@ -339,18 +325,18 @@ a {
   transition: background-color .3s;
 }
 
-.dropdown__link i, 
+.dropdown__link i,
 .dropdown__sublink i {
   font-size: 1.25rem;
   font-weight: initial;
 }
 
-.dropdown__link:hover, 
+.dropdown__link:hover,
 .dropdown__sublink:hover {
   background-color: var(--primary-color);
 }
 
-.dropdown__menu, 
+.dropdown__menu,
 .dropdown__submenu {
   max-height: 10px;
   overflow: hidden;
@@ -358,8 +344,8 @@ a {
 }
 
 /* Show dropdown menu & submenu */
-.dropdown__item:hover .dropdown__menu, 
-.dropdown__subitem:hover > .dropdown__submenu {
+.dropdown__item:hover .dropdown__menu,
+.dropdown__subitem:hover>.dropdown__submenu {
   max-height: 1000px;
   transition: max-height .4s ease-in;
 }
@@ -379,15 +365,13 @@ a {
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For small devices */
 @media screen and (max-width: 340px) {
   .container {
     margin-inline: auto;
   }
-  
+
 }
 
-/* For large devices */
 @media screen and (min-width: 1200px) {
   .container {
     margin-inline: auto;
@@ -403,12 +387,14 @@ a {
   .nav__toggle {
     display: none;
   }
+
   .nav__list {
     height: 100%;
     display: flex;
     column-gap: 5rem;
     letter-spacing: 1px;
   }
+
   .nav__link {
     height: 100%;
     padding: 0;
@@ -418,12 +404,12 @@ a {
 
   }
 
-  .dropdown__item, 
+  .dropdown__item,
   .dropdown__subitem {
     position: relative;
   }
 
-  .dropdown__menu, 
+  .dropdown__menu,
   .dropdown__submenu {
     max-height: initial;
     overflow: initial;
@@ -436,7 +422,7 @@ a {
     padding: 5rem 0;
   }
 
-  .dropdown__link, 
+  .dropdown__link,
   .dropdown__sublink {
     padding-inline: 1rem 3.5rem;
   }
@@ -451,7 +437,6 @@ a {
     top: .5rem;
   }
 
-  /* Show dropdown menu */
   .dropdown__item:hover .dropdown__menu {
     opacity: 1;
     top: -1.4rem;
@@ -460,13 +445,27 @@ a {
     transition: top .3s;
   }
 
-  /* Show dropdown submenu */
-  .dropdown__subitem:hover > .dropdown__submenu {
+  .dropdown__subitem:hover>.dropdown__submenu {
     opacity: 1;
     top: -5rem;
     pointer-events: initial;
     transition: top .3s;
   }
+}
+
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --normal-font-size: 1rem;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 
@@ -477,4 +476,3 @@ a {
 
   }
 }
-

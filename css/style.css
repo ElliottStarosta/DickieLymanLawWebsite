@@ -8,7 +8,7 @@
 @import url('/css/practice-areas.css');
 @import url('/css/articles.css');
 @import url('/css/articling.css');
-@import url('/css/contact.css');
+/* @import url('/css/contact.css'); */
 @import url('/css/footer.css');
 
 html {
@@ -43,8 +43,8 @@ html::before {
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
 
-    --primary-color-light:#305a82;
-    --primary-color-lighten:#4b83b7;
+    --primary-color-light: #305a82;
+    --primary-color-lighten: #4b83b7;
     --white-color: #fff;
     --body-color: hsl(220, 100%, 97%);
 
@@ -82,7 +82,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-} 
+}
 
 .flex-between {
     display: flex;

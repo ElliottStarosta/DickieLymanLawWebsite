@@ -1,3 +1,6 @@
+/*=============== About Us ================*/
+
+
 .about-us {
     min-height: calc(100vh - 45px);
 }
@@ -97,6 +100,8 @@
     margin-top: 20px;
 }
 
+/*=============== Cards ===============*/
+
 .card {
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -151,7 +156,6 @@
 }
 
 .reverse-text {
-    /* margin-left: 15px; */
     margin-right: 30px;
 }
 
@@ -175,10 +179,6 @@
     position: relative;
 }
 
-/* .card__extra-content {
-    display: none;
-    transition: height 0.3s ease; 
-} */
 
 .card__extra-content {
     overflow: hidden;
@@ -216,7 +216,7 @@
     margin-bottom: 1rem;
     line-height: 1.5;
     text-transform: uppercase;
-    /* Transition properties for smoother hover effects */
+
     transition: background-color 0.3s ease-in-out,
         color 0.3s ease-in-out,
         opacity 0.3s ease-in-out,
@@ -351,6 +351,7 @@
     .extra-section ul li {
         margin-bottom: 5px;
     }
+/*=============== Card Media Query ===============*/
 
     @media (max-width: 600px) {
         .card {
@@ -435,6 +436,7 @@
 }
 
 
+/*=============== Media Queries ===============*/
 
 @media (max-width: 650px) {
 
