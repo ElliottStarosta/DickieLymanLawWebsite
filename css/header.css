@@ -106,7 +106,7 @@
   font-size: 1.25rem;
   cursor: pointer;
   transition: opacity .1s, transform .4s;
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 .nav__link.contact {
