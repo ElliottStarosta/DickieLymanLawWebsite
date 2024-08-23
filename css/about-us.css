@@ -13,7 +13,7 @@
     z-index: 100;
     border-radius: 10px 10px 10px 100px;
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
 }
 
 .mission-row {
@@ -23,7 +23,8 @@
     align-items: center;
 }
 
-.col-left, .col-right {
+.col-left,
+.col-right {
     flex: 1;
     min-width: 300px;
     margin: 10px 0;
@@ -56,7 +57,8 @@
 }
 
 .mission-title {
-    opacity: 0.7;;
+    opacity: 0.7;
+    ;
     color: var(--accent-color);
 }
 
@@ -80,12 +82,12 @@
 .about__lawyers h2::after {
     content: '';
     position: absolute;
-    bottom: 0px; 
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px; 
-    height: 4px; 
-    background-color: var(--secondary-color); 
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
 }
 
 .lawyer__container {
@@ -115,12 +117,12 @@
 .card__content {
     display: flex;
     align-items: center;
-   
+
 }
 
 .card__banner {
     width: 300px;
-    margin-right: 3rem; 
+    margin-right: 3rem;
 }
 
 .card__banner .img1,
@@ -133,7 +135,7 @@
 }
 
 .card__banner .img1 {
-    border-radius: 20px 0 0 20px; 
+    border-radius: 20px 0 0 20px;
 }
 
 .card__banner .img2 {
@@ -145,7 +147,7 @@
 }
 
 .card__text {
-    flex: 1; 
+    flex: 1;
 }
 
 .reverse-text {
@@ -158,7 +160,7 @@
     color: var(--secondary-color);
 }
 
-.card__name { 
+.card__name {
     margin: 10px 0 0 0;
     font-weight: 900;
 }
@@ -170,7 +172,7 @@
     overflow: hidden;
     line-height: 1.5em;
     text-overflow: ellipsis;
-    position: relative; 
+    position: relative;
 }
 
 /* .card__extra-content {
@@ -215,11 +217,11 @@
     line-height: 1.5;
     text-transform: uppercase;
     /* Transition properties for smoother hover effects */
-    transition: background-color 0.3s ease-in-out, 
-                color 0.3s ease-in-out, 
-                opacity 0.3s ease-in-out, 
-                box-shadow 0.3s ease-in-out, 
-                transform 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        opacity 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out,
+        transform 0.3s ease-in-out;
     z-index: 1;
 }
 
@@ -257,12 +259,14 @@
     color: inherit;
     text-decoration: none;
     font-size: 2em;
-    display: inline-block; 
+    display: inline-block;
 }
 
 .card__icon .mail {
     transition: all 0.3s ease-in-out;
-    color: #dd4b39;.card {
+    color: #dd4b39;
+
+    .card {
         display: flex;
         background: #ffffff;
         border-radius: 10px;
@@ -274,26 +278,26 @@
         height: auto;
         flex-direction: column;
     }
-    
+
     .card__banner {
         display: flex;
         align-items: center;
         margin-bottom: 10px;
     }
-    
+
     .card__banner img {
         width: 80px;
-        height: 80px; 
+        height: 80px;
         object-fit: cover;
 
-        margin-right: 15px; 
+        margin-right: 15px;
     }
-    
+
     .card__banner .card__name {
         font-size: 1.5rem;
         margin: 0;
     }
-    
+
     .card__content {
         padding-left: 20px;
         display: flex;
@@ -301,89 +305,89 @@
         flex: 2;
         position: relative;
     }
-    
+
     .card__name {
         font-size: 1.5rem;
         margin: 10px 0 0 0;
     }
-    
+
     .card__description {
         font-size: 1rem;
         margin: 15px 0 0 0;
-        overflow: hidden; 
+        overflow: hidden;
         line-height: 1.2em;
         text-overflow: ellipsis;
     }
-    
+
     .card__extra-content {
         padding: 20px;
         background-color: #f9f9f9;
         margin-top: 10px;
     }
-    
+
     .extra-section {
         margin-bottom: 20px;
     }
-    
+
     .extra-section h4 {
         font-size: 1.2rem;
         color: #333;
         margin-bottom: 10px;
     }
-    
+
     .extra-section p {
         font-size: 1rem;
         line-height: 1.6;
         margin-bottom: 10px;
     }
-    
+
     .extra-section ul {
         list-style-type: disc;
         margin-left: 20px;
         font-size: 1rem;
         line-height: 1.6;
     }
-    
+
     .extra-section ul li {
         margin-bottom: 5px;
     }
-    
+
     @media (max-width: 600px) {
         .card {
             max-width: 100%;
-            width: 100%; 
-            padding: 5px; 
+            width: 100%;
+            padding: 5px;
         }
-    
+
         .card__banner img {
-            width: 60px; 
+            width: 60px;
             height: 60px;
-            margin-right: 10px; 
+            margin-right: 10px;
         }
-    
+
         .card__banner .card__name {
             font-size: 1.2rem;
         }
-    
+
         .card__description {
-            font-size: 0.9rem; 
-            margin-top: 10px; 
+            font-size: 0.9rem;
+            margin-top: 10px;
         }
-    
+
         .card__extra-content {
-            padding: 15px; 
+            padding: 15px;
         }
-    
+
         .extra-section h4 {
-            font-size: 1rem; 
+            font-size: 1rem;
         }
-    
+
         .extra-section p,
         .extra-section ul {
-            font-size: 0.85rem; 
+            font-size: 0.85rem;
         }
     }
-    
+
 }
 
 .card__icon .linkedin {
@@ -446,6 +450,6 @@
 
 @media (max-width: 1050px) {
     .col-right {
-       display: none;
+        display: none;
     }
 }
