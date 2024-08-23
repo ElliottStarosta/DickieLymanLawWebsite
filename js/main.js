@@ -31,7 +31,7 @@ window.onload = function () {
     setTimeout(() => {
         toggle.className = 'nav__toggle';
         console.log("removed");
-    }, 300);
+    }, 125);
 };
 
 // Initialize the showMenu function
