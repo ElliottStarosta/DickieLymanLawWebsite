@@ -250,4 +250,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('img[data-src]').forEach(img => {
         observer.observe(img); // Start observing each image
     });
+
+    
 });

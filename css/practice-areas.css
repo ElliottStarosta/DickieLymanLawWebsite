@@ -11,7 +11,7 @@
   color: var(--accent-color);
   padding: 1em 2em;
   margin-top: 1em;
-  background: rgba(227, 48, 49, 0.9);
+  background: var(--primary-color);
   text-align: center;
   color: white;
   border-radius: .2em;
@@ -26,7 +26,7 @@
   display: block;
   width: 60px;
   height: 4px;
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   margin: 10px auto 0;
 }
 

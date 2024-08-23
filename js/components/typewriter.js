@@ -29,8 +29,8 @@ TxtType.prototype.tick = function() {
     }
 
     var that = this;
-    var delta = 200; // Increase for slower typing
-
+    var delta = 50; // Increase for slower typing
+    
     if (this.isDeleting) {
         delta /= 2; 
     }

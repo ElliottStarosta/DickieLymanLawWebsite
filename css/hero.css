@@ -1,10 +1,12 @@
+/*========== Hero Container and Setup ==========*/
+
+
 .hero {
     position: relative;
     overflow: hidden;
     min-height: calc(100vh - 45px);
     background-image: linear-gradient(rgba(75, 131, 183, 0.45), rgba(9, 0, 77, 0.65)), url(../assets/hero-background.png);
     background-size: cover;
-    /* background-position: right center; */
     background-position: center;
     padding: 10px 8%;
     display: flex;
@@ -46,16 +48,19 @@
     max-width: 700px;
     height: auto;
     flex: 1;
-    position: relative; /* Ensure img remains in document flow for correct stacking */
-    z-index: 2; /* Place img above svg */
+    position: relative;
+    z-index: 2;
     filter: drop-shadow(0px -5px 5px rgba(0, 0, 0, 0.5));
 }
 
 .hero-text {
     flex-grow: 2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    position: relative; /* Ensure text remains in document flow */
-    z-index: 2; /* Place text above img and svg */
+    position: relative;
+    z-index: 2;
+
+
+/*========== Hero Title ==========*/
 }
 
 .typewrite {
@@ -72,6 +77,9 @@
     line-height: 3rem;
 }
 
+/*========== Hero Text ==========*/
+
+
 .hero-text p {
     font-size: 1.4rem;
     margin-top: 12px;
@@ -80,11 +88,13 @@
     line-height: 2.2rem;
     color: var(--accent-color);
     opacity: 0.8;
-} 
+}
 
+/*========== Button ==========*/
 
 .practice-areas-btn {
-    background-color: #e33031;
+    /* background-color: #e33031; */
+    background-color: var(--primary-color);
     border-radius: 0px 50px 50px 0px;
     box-shadow: rgba(227, 48, 49, 0.2) 0 -25px 18px -14px inset, rgba(227, 48, 49, 0.15) 0 1px 2px, rgba(227, 48, 49, 0.15) 0 2px 4px, rgba(227, 48, 49, 0.15) 0 4px 8px, rgba(227, 48, 49, 0.15) 0 8px 16px, rgba(227, 48, 49, 0.15) 0 16px 32px;
     color: var(--accent-color);
@@ -104,7 +114,7 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     cursor: pointer;
-} 
+}
 
 .practice-areas-btn.visible {
     opacity: 1;
@@ -117,11 +127,13 @@
 }
 
 .practice-areas-btn:active {
-    transform: scale(0.95) rotate(-3deg);;
+    transform: scale(0.95) rotate(-3deg);
 }
 
+/*========== Media Queries ==========*/
+
 @media screen and (max-width: 1550px) {
-  
+
     .hero .container .hero-img {
         max-width: 600px;
     }
@@ -131,21 +143,23 @@
     .typewrite {
         font-size: 2.2rem;
     }
+
     .hero .container .hero-img {
         max-width: 550px;
     }
 
     .hero-text p {
         font-size: 1.2rem;
-    } 
+    }
 
     .practice-areas-btn {
         font-size: 15px;
-        
+
     }
 }
+
 @media screen and (max-width: 1475px) {
-   
+
     .hero .container .hero-img {
         max-width: 500px;
     }
@@ -155,11 +169,12 @@
     .typewrite {
         font-size: 2rem;
     }
+
     .hero .container .hero-img {
-        max-width:500px;
+        max-width: 500px;
     }
 
-   
+
 }
 
 @media screen and (max-width: 1280px) {
@@ -216,13 +231,13 @@
         font-size: 1rem;
     }
 
-    
+
 
     .typewrite {
         font-size: 2rem;
     }
 
-    
+
 }
 
 
@@ -234,11 +249,12 @@
 
 
 
-    
+
 }
+
 @media screen and (max-width: 500px) {
 
-    
+
 
     .hero-text p {
         font-size: 18px;
@@ -251,7 +267,7 @@
     }
 
 
-    
+
 }
 
 @media screen and (min-width: 1118px) {
@@ -259,4 +275,3 @@
         background-position: center 35%;
     }
 }
-

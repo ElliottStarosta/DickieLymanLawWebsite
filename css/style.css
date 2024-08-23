@@ -1,3 +1,5 @@
+/*========== Imports ==========*/
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 
@@ -8,7 +10,6 @@
 @import url('/css/practice-areas.css');
 @import url('/css/articles.css');
 @import url('/css/articling.css');
-/* @import url('/css/contact.css'); */
 @import url('/css/footer.css');
 
 html {
@@ -41,12 +42,11 @@ html::before {
     --header-height: 3.5rem;
 
     /*========== Colors ==========*/
-    /*Color mode HSL(hue, saturation, lightness)*/
 
     --primary-color-light: #305a82;
     --primary-color-lighten: #4b83b7;
     --white-color: #fff;
-    --body-color: hsl(220, 100%, 97%);
+    --body-color: #f0f5ff;
 
     --normal-font-size: .938rem;
 
@@ -74,22 +74,4 @@ body {
     font-family: var(--mukta);
     overflow-x: hidden;
 
-}
-
-
-
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.flip-horizontal {
-    transform: rotate(180deg);
 }
