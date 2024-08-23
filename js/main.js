@@ -74,25 +74,29 @@ window.addEventListener('DOMContentLoaded', () => {
 // Initialize Lenis for smooth scrolling
 document.addEventListener('DOMContentLoaded', initLenis);
 
-// Parallax effect
 let scrollPosition = 0;
 let ticking = false;
 
 function updateParallax() {
-    // Applying the parallax effect to the hero background
-    document.querySelector('.hero').style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+    // Only apply parallax effect on screens wider than 768px
+    if (window.innerWidth > 700) {
 
-    // Applying parallax effect to the .container content
-    document.querySelector('.container').style.transform = 'translateY(' + scrollPosition * 0.3 + 'px)';
+        document.querySelector('.hero').style.backgroundPositionY = scrollPosition * 0.5 + 'px';
 
-    // Applying parallax effect to the .container img
-    document.querySelector('.container img').style.transform = 'translateY(' + scrollPosition * 0. - 3 + 'px)';
-    // Change z-index of .hero-text based on scroll position
-    const textElement = document.querySelector('.hero-text');
-    if (scrollPosition > 100) {
-        textElement.style.zIndex = -1;
+        document.querySelector('.container').style.transform = 'translateY(' + scrollPosition * 0.3 + 'px)';
+
+        document.querySelector('.container img').style.transform = 'translateY(' + scrollPosition * 0.3 + 'px)';
+
+        const textElement = document.querySelector('.hero-text');
+        if (scrollPosition > 100) {
+            textElement.style.zIndex = -1;
+        } else {
+            textElement.style.zIndex = ''; 
+        }
     } else {
-        textElement.style.zIndex = ''; // Reset to default if not scrolled enough
+        document.querySelector('.hero').style.backgroundPositionY = '';
+        document.querySelector('.container').style.transform = '';
+        document.querySelector('.container img').style.transform = '';
     }
 
     ticking = false;
@@ -105,6 +109,7 @@ window.addEventListener('scroll', () => {
         ticking = true;
     }
 });
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
