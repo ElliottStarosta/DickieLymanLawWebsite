@@ -100,8 +100,12 @@
   margin: 10px 0;
 }
 
-
-
+.practice-card a {
+  transition: color 0.3s ease;  
+}
+.practice-card a:hover {
+  color: var(--secondary-color);
+}
 
 .highlight {
   background-color: rgba(227, 48, 49, 0.5);
