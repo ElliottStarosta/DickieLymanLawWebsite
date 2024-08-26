@@ -28,7 +28,7 @@
   width: 100%;
   max-width: 100%;
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(0, 39, 77,0.45);
   z-index: 1000;
   transition: transform 0.5s ease-in-out;
   backdrop-filter: blur(8px);
@@ -400,7 +400,7 @@
     padding: 0;
     justify-content: initial;
     column-gap: .25rem;
-    color: var(--primary-color);
+    color: var(--accent-color);
 
   }
 

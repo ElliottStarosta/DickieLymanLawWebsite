@@ -27,7 +27,7 @@
   display: block;
   width: 60px;
   height: 4px;
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   margin: 10px auto 0;
 }
 

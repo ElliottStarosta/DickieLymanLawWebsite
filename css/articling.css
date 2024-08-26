@@ -104,13 +104,18 @@
   color: var(--black-500);
 }
 
-.affiliations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.affiliations-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 20px;
 }
 
 .affiliation-box {
+  height: 100%;
+  flex: 1;
+  min-width: 300px;
+  max-width: calc(33.333% - 20px);
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -123,7 +128,7 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.grid-articling h3 {
+.affiliations-header{
   display: flex;
   align-items: center;
   justify-content: center;

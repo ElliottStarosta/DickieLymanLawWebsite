@@ -85,7 +85,6 @@ function updateParallax() {
 
         document.querySelector('.container').style.transform = 'translateY(' + scrollPosition * 0.3 + 'px)';
 
-        document.querySelector('.container img').style.transform = 'translateY(' + scrollPosition * 0.3 + 'px)';
 
         const textElement = document.querySelector('.hero-text');
         if (scrollPosition > 100) {
@@ -96,7 +95,6 @@ function updateParallax() {
     } else {
         document.querySelector('.hero').style.backgroundPositionY = '';
         document.querySelector('.container').style.transform = '';
-        document.querySelector('.container img').style.transform = '';
     }
 
     ticking = false;
@@ -200,7 +198,7 @@ function changeTextOnResize() {
             logoElement = document.createElement('img');
             logoElement.setAttribute('data-aos', 'fade-down');
             logoElement.id = 'hero-text-logo';
-            logoElement.src = '/assets/logo-C1dhDkm5.png'; // path for the asset on the live web server
+            logoElement.src = '/assets/hero/logo-C1dhDkm5.png'; // path for the asset on the live web server
             logoElement.alt = 'Dickie & Lyman Logo';
             heroTextContent.insertBefore(logoElement, pElement);
             logoElement.style.width = '450px';
