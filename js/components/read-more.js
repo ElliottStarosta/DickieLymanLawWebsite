@@ -37,7 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     if (isExpanded) {
                         lenis.stop();
-                        $(document).ready(function() { lenis.start(); });
+                        // Ensure lenis starts only after the DOM is fully loaded
+                        if (document.readyState === 'loading') {
+                            // DOM is still loading, add an event listener
+                            document.addEventListener('DOMContentLoaded', () => {
+                                lenis.start();
+                            });
+                        } else {
+                            // DOM is already loaded
+                            lenis.start();
+                        }
 
                         readMoreBtn.textContent = 'Read Less';
                         cardExtraContent.style.display = 'block';

@@ -15,11 +15,10 @@ requestAnimationFrame(raf);
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    $(document).ready(function() {
-        lenis.start();
-        handleInitialHash();
-    });
+    lenis.start();
+    handleInitialHash();
 });
+
 const toggle = document.getElementById("nav-toggle");
 
 function scrollToAnchor(anchor) {

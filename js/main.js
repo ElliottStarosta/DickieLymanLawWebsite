@@ -146,10 +146,19 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ensure lenis is initialized or available in the global scope
         if (typeof lenis !== 'undefined') {
             lenis.stop();
-            $(document).ready(() => {
+            
+            // Ensure lenis starts only after the DOM is fully loaded
+            if (document.readyState === 'loading') {
+                // DOM is still loading, add an event listener
+                document.addEventListener('DOMContentLoaded', () => {
+                    lenis.start();
+                });
+            } else {
+                // DOM is already loaded
                 lenis.start();
-            });
+            }
         }
+        
 
         // Hide short description and show full description
         shortDescription.style.display = 'none';
@@ -198,22 +207,28 @@ function changeTextOnResize() {
             logoElement = document.createElement('img');
             logoElement.setAttribute('data-aos', 'fade-down');
             logoElement.id = 'hero-text-logo';
-            logoElement.src = '/assets/hero/logo-C1dhDkm5.png';
+            logoElement.src = 'assets/hero/logo-cd4goke7.png'; 
             logoElement.alt = 'Dickie & Lyman Logo';
             heroTextContent.insertBefore(logoElement, pElement);
             logoElement.style.width = '450px';
+            logoElement.style.height = '400px';
             logoElement.style.margin = '20px 0';
         }
         if (window.innerWidth <= 330) {
             logoElement.style.width = '205px';
+            logoElement.style.height = '175px';
         } else if (window.innerWidth <= 350) {
             logoElement.style.width = '225px';
+            logoElement.style.height = '195px';
         } else if (window.innerWidth <= 410) {
             logoElement.style.width = '235px';
+            logoElement.style.height = '205px';
         } else if (window.innerWidth <= 480) {
             logoElement.style.width = '300px';
+            logoElement.style.height = '267px';
         } else if (window.innerWidth <= 570) {
             logoElement.style.width = '375px';
+            logoElement.style.height = '325px';
         }
         pElement.textContent = '';
     } else {

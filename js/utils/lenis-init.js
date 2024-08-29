@@ -11,12 +11,13 @@ function raf(time) {
 }
 
 export function initLenis() {
-    $(document).ready(() => {
+    document.addEventListener('DOMContentLoaded', () => {
         lenis.start();
         handleInitialHash();
     });
     requestAnimationFrame(raf);
 }
+
 
 export function startLenis() {
     lenis.start();

@@ -6,9 +6,7 @@
     overflow: hidden;
     min-height: calc(100vh - 45px);
     background-image: linear-gradient(rgba(75, 131, 183, 0.45), rgba(9, 0, 77, 0.65)), 
-    url('../assets/hero/webp/hero-background.webp'), 
-    url('../assets/hero/avif/hero-background.avif'),
-    url('../assets/hero/hero-background.png');
+    url('../assets/hero/webp/hero-background.webp'); 
 
     background-size: cover;
     background-position: center;
@@ -19,7 +17,7 @@
     width: 100%;
 }
 
-.hero:before {
+/* .hero:before {
     content: '';
     position: absolute;
     top: 0;
@@ -32,7 +30,7 @@
     background-size: cover;
     z-index: -1;
     transform: translateZ(0);
-}
+} */
 
 .hero .container {
     position: relative;
