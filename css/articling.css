@@ -27,7 +27,7 @@
 
 .articling__logo img {
   width: 400px;
-  height: 345px;
+  height: auto;
   filter: drop-shadow(0px -2px 4px rgba(0, 0, 0, 0.5));
 
 }
