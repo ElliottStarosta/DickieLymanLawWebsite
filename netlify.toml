@@ -1,5 +1,7 @@
-[headers]
+[build]
+  publish = "public"
+
 [[headers]]
-  for = "/*"
-  [headers.values]
-    X-Robots-Tag = ""
+for = "/*"
+[headers.values]
+  X-Robots-Tag = ""
