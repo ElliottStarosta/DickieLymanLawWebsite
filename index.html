@@ -2,20 +2,42 @@
 <html lang="en">
 
 <head>
+   <!--============ META CHARSET ===============-->
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Dickie and Lyman Lawyers LLP offers specialized legal services in property tax assessments, appeals, and related matters. Trust our experienced team for reliable advice and effective solutions." />
-   <link rel="icon" type="image/x-icon" href="assets/logo.png">
 
-   <!--============ REMIXICONS ===============-->
-   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-   <!--============ AOS ===============-->
-   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   <!--============ VIEWPORT SETTINGS ===============-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--============ PAGE DESCRIPTION ===============-->
+   <meta name="description" content="Dickie and Lyman Lawyers LLP offers specialized legal services in property tax assessments, appeals, and related matters. Trust our experienced team for reliable advice and effective solutions." />
+
+   <!--============ ROBOTS META TAG ===============-->
+   <meta name="robots" content="index, follow">
+
+   <!--============ PRECONNECT AND DNS-PREFETCH ===============-->
+   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+
+   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+   <!--============ MAIN CSS ===============-->
    <link rel="stylesheet" href="/css/style.css">
 
+   <!--============ REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" media="print" onload="this.media='all'">
+   <noscript><link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet"></noscript>
 
+   <!--============ AOS ===============-->
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+   <!--============ TAB INFORMATION ===============-->
+   <link rel="icon" type="image/x-icon" href="assets/logo.png">
    <title>Dickie & Lyman LLP Lawyers</title>
 </head>
+
 
 <body>
    <!--=============== HEADER ===============-->
@@ -134,7 +156,11 @@
    <!--=============== HERO ===============-->
    <section class="hero" id="home">
       <div class="container">
-         <img src="assets/hero/hero-img.png" alt="Hero" class="hero-img" data-aos="fade-left">
+         <picture>
+            <source srcset="assets/hero/webp/hero-img.webp" type="image/webp">
+            <source srcset="assets/hero/avif/hero-img.avif" type="image/avif">
+            <img src="assets/hero/hero.png" alt="Hero" class="hero-img" data-aos="fade-left" loading="lazy">
+         </picture> 
          <div class="hero-text">
             <h1 class="hero__title" data-aos="fade-right">
                <a href="#" class="typewrite" data-period="2000" data-type='[
@@ -174,7 +200,11 @@
             </div>
             <div class="col-right">
                <div class="about__image">
-                  <img src="assets/hero/mission.png" alt="Mission">
+                  <picture>
+                     <source srcset="assets/hero/webp/mission.webp" type="image/webp">
+                     <source srcset="assets/hero/avif/mission.avif" type="image/avif">
+                     <img src="assets/hero/mission.png" alt="Mission" loading="lazy">
+                  </picture> 
                </div>
             </div>
          </div>
@@ -188,7 +218,11 @@
                <div class="card__content">
                   <div class="card__info">
                      <div class="card__banner">
-                        <img src="assets/about-us/placeholder.jpg" alt="John Dickie" class="img1" data-aos="fade-right">
+                        <picture>
+                           <source srcset="assets/about-us/webp/placeholder.webp" type="image/webp">
+                           <source srcset="assets/about-us/avif/placeholder.avif" type="image/avif">
+                           <img src="assets/about-us/placeholder.jpg" alt="John Dickie" class="img1" data-aos="fade-right" loading="lazy">
+                        </picture> 
                      </div>
                      <div class="card__text">
                         <h3 class="card__name" data-aos="fade-down">John W. Dickie</h3>
@@ -262,10 +296,10 @@
                            <button class="read-more">Read More</button>
                         </div>
                         <div class="card__links" data-aos="fade-up">
-                           <a href="mailto:jdickie@dickieandlyman.com" class="card__icon" target="_blank"><i
+                           <a href="mailto:jdickie@dickieandlyman.com" class="card__icon" target="_blank" aria-label="Email John Dickie"><i
                                  class="ri-mail-line mail"></i></a>
                            <a href="https://ca.linkedin.com/in/john-dickie-208aa915?original_referer=https%3A%2F%2Fwww.google.com%2F"
-                              class="card__icon" target="_blank"><i class="ri-linkedin-box-fill linkedin"></i></a>
+                              class="card__icon" target="_blank" aria-label="John Dickie's LinkedIn Profile"><i class="ri-linkedin-box-fill linkedin"></i></a>
                         </div>
                      </div>
                   </div>
@@ -278,7 +312,11 @@
                <div class="card__content">
                   <div class="card__info reverse">
                      <div class="card__banner">
-                        <img src="assets/about-us/placeholder.jpg" alt="David Lyman" class="img2" data-aos="fade-left">
+                        <picture>
+                           <source srcset="assets/about-us/webp/placeholder.webp" type="image/webp">
+                           <source srcset="assets/about-us/avif/placeholder.avif" type="image/avif">
+                           <img src="assets/about-us/placeholder.jpg" alt="David Lyman" class="img2" data-aos="fade-left" loading="lazy">
+                        </picture> 
                      </div>
                      <div class="card__text reverse-text">
                         <h3 class="card__name" data-aos="fade-down">S. David Lyman</h3>
@@ -361,10 +399,10 @@
                            <button class="read-more">Read More</button>
                         </div>
                         <div class="card__links" data-aos="fade-up">
-                           <a href="mailto:dlyman@dickieandlyman.com" class="card__icon" target="_blank"><i
+                           <a href="mailto:dlyman@dickieandlyman.com" class="card__icon" target="_blank" aria-label="Email David Lyman"><i
                                  class="ri-mail-line mail"></i></a>
                            <a href="https://ca.linkedin.com/in/david-lyman-22953710?original_referer=https%3A%2F%2Fwww.google.com%2F"
-                              class="card__icon" target="_blank"><i class="ri-linkedin-box-fill linkedin"></i></a>
+                              class="card__icon" target="_blank"><i class="ri-linkedin-box-fill linkedin" aria-label="David Lyman's LinkedIn Profile"></i></a>
                         </div>
                      </div>
                   </div>
@@ -381,7 +419,11 @@
                <div data-aos="fade-right">
                   <div class="article-item">
                      <div class="article-image">
-                        <img src="assets/articles-publishing/person-reading.png" alt="Person Reading">
+                        <picture>
+                           <source srcset="assets/articles-publishing/webp/person-reading.webp" type="image/webp">
+                           <source srcset="assets/articles-publishing/avif/person-reading.avif" type="image/avif">
+                           <img src="assets/articles-publishing/person-reading.png" alt="Person Reading" loading="lazy">
+                        </picture> 
                      </div>
                      <div class="article-content">
                         <h3>Recent Articles by John Dickie</h3>
@@ -402,14 +444,19 @@
                <div data-aos="fade-left">
                   <div class="article-item">
                      <div class="article-image">
-                        <img src="assets/articles-publishing/textbook.png" alt="Textbook">
+                        <picture>
+                           <source srcset="assets/articles-publishing/webp/textbook.webp" type="image/webp">
+                           <source srcset="assets/articles-publishing/avif/textbook.avif" type="image/avif">
+                           <img src="assets/articles-publishing/textbook.png" alt="Textbook" loading="lazy">
+                        </picture> 
                      </div>
                      <div class="article-content">
                         <h3>Textbooks by John Dickie and David Lyman</h3>
                         <p>Working with the Residential Tenancies Act, 5th Edition</p>
                         <p>(This helpful guide can be ordered by calling Emond-Montgomery at 1-888-837-0815 or <a
                               href="https://emond.ca/Store/Books/Working-with-the-Residential-Tenancies-Act-5th-Ed?r=%2fStore%3fsearchtext%3dWorking%2bwith%2bthe%2bResidential%2bTenancies%2bAct%2b4th%2bEdition%252c%2b2017%26searchmode%3danyword"
-                              target="_blank"><u>order online</u></a>.)</p>
+                              target="_blank"><u>order online</u></a>.)
+                        </p>
                      </div>
                   </div>
                </div>
@@ -426,7 +473,12 @@
             </div>
             <div class="practice-cards" data-aos="fade-up">
                <div class="practice-card" data-id="1" id="residential-tenancy-law">
-                  <img src="assets/practice-areas/people-shaking.png" alt="Residential Tenancy Law">
+                  <picture>
+                     <source srcset="assets/practice-areas/webp/people-shaking.webp" type="image/webp">
+                     <source srcset="assets/practice-areas/avif/people-shaking.avif" type="image/avif">
+                     <img src="assets/practice-areas/people-shaking.png" alt="Residential Tenancy Law" loading="lazy">
+                  </picture> 
+                  
                   <h3>Residential Tenancy Law</h3>
                   <p class="short-description">Residential Tenancy Law encompasses regulations governing tenant and
                      landlord rights, obligations, and dispute resolutions in rental properties.</p>
@@ -490,7 +542,11 @@
                   <button class="read-more explore-more-btn">Explore More</button>
                </div>
                <div class="practice-card" data-id="2" id="property-tax-assessment-law">
-                  <img src="assets/practice-areas/property-tax.png" alt="Property Tax">
+                  <picture>
+                     <source srcset="assets/practice-areas/webp/property-tax.webp" type="image/webp">
+                     <source srcset="assets/practice-areas/avif/property-tax.avif" type="image/avif">
+                     <img src="assets/practice-areas/property-tax.png" alt="Property Tax" loading="lazy">
+                  </picture> 
                   <h3>Property Tax & Assessment Law</h3>
                   <p class="short-description">Property Tax & Assessment Law covers regulations and deadlines concerning
                      property tax applications, assessments, tenant notifications, and strategic tax planning in
@@ -561,8 +617,11 @@
                   <button class="read-more explore-more-btn">Explore More</button>
                </div>
                <div class="practice-card" data-id="3" id="commerical-tenacy-law">
-                  <img src="assets/practice-areas/lease-agreement.png" loading="lazy" alt="Commercial Law">
-
+                  <picture>
+                     <source srcset="assets/practice-areas/webp/lease-agreement.webp" type="image/webp">
+                     <source srcset="assets/practice-areas/avif/lease-agreement.avif" type="image/avif">
+                     <img src="assets/practice-areas/lease-agreement.png" loading="lazy" alt="Commercial Law" loading="lazy">
+                  </picture> 
                   <h3>Commercial Tenancy Law</h3>
                   <p class="short-description"> Commercial Tenancy Law governs leasing rights, obligations, and dispute
                      resolutions for business properties.</p>
@@ -592,7 +651,11 @@
                   <button class="read-more explore-more-btn">Explore More</button>
                </div>
                <div class="practice-card" data-id="4" id="government-relations">
-                  <img src="assets/practice-areas/gov-relations.png" alt="Government Relations">
+                  <picture>
+                     <source srcset="assets/practice-areas/webp/gov-relations.webp" type="image/webp">
+                     <source srcset="assets/practice-areas/avif/gov-relations.avif" type="image/avif">
+                     <img src="assets/practice-areas/gov-relations.png" alt="Government Relations" loading="lazy">
+                  </picture> 
                   <h3>Government Relations</h3>
                   <p class="short-description">Government Relations involves advocating legal positions to elected
                      officials and government agencies. It focuses on influencing laws and regulations relevant to
@@ -648,7 +711,11 @@
    <section id="student-articling">
       <div class="articling-container" data-aos="fade-up">
          <div class="articling__logo">
-            <img src="assets/hero/logo.png" alt="Logo">
+            <picture>
+               <source srcset="assets/hero/webp/logo.webp" type="image/webp">
+               <source srcset="assets/hero/avif/logo.avif" type="image/avif">
+               <img src="assets/hero/logo.png" alt="Logo" loading="lazy">
+            </picture>
          </div>
          <div class="articling-section" data-aos="fade-down">
             <h2>Articling at Dickie & Lyman</h2>
@@ -718,7 +785,11 @@
             <h3>Affiliations</h3>
             <div class="affiliations-grid">
                <div class="affiliation-box">
-                  <img src="assets/affiliations/gaval-tax.png" alt="Landlord & Tenant Law">
+                  <picture>
+                     <source srcset="assets/affiliations/webp/gaval-tax.webp" type="image/webp">
+                     <source srcset="assets/affiliations/avif/gaval-tax.avif" type="image/avif">
+                     <img src="assets/affiliations/gaval-tax.png" alt="Landlord & Tenant Law" loading="lazy">
+                  </picture>
                   <h4>Landlord & Tenant Law</h4>
                   <ul>
                      <li>Eastern Ontario Landlord Organization (as an organizing and founding member)</li>
@@ -729,7 +800,11 @@
                   </ul>
                </div>
                <div class="affiliation-box">
-                  <img src="assets/affiliations/tax-office.png" alt="Municipal Tax Assessment">
+                  <picture>
+                     <source srcset="assets/affiliations/webp/tax-office.webp" type="image/webp">
+                     <source srcset="assets/affiliations/avif/tax-office.avif" type="image/avif">
+                     <img src="assets/affiiations/tax-office.png" alt="Municipal Tax Assessment" loading="lazy">
+                  </picture>
                   <h4>Municipal Tax Assessment</h4>
                   <ul>
                      <li>Building Owners and Managers Association (Ottawa) Property Tax Sub-committee (as an organizing
@@ -738,7 +813,11 @@
                   </ul>
                </div>
                <div class="affiliation-box">
-                  <img src="assets/affiliations/professional.png" alt="Professional Affiliations">
+                  <picture>
+                     <source srcset="assets/affiliations/webp/professional.webp" type="image/webp">
+                     <source srcset="assets/affiliations/avif/professional.avif" type="image/avif">
+                     <img src="assets/affiliations/professional.png" alt="Professional Affiliations" loading="lazy">
+                  </picture>
                   <h4>Professional</h4>
                   <ul>
                      <li>Canadian Bar Association</li>
@@ -760,7 +839,9 @@
                <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.460564764101!2d-75.74811402326807!3d45.37987943906007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce06bd3b155555%3A0xc0bcfd907c8ce560!2s1600%20Carling%20Ave%20Unit%20640%2C%20Ottawa%2C%20ON%20K2A%201C5!5e0!3m2!1sen!2sca!4v1720399254257!5m2!1sen!2sca"
                   width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Map showing the location of our office"
+                  ></iframe>
 
             </div>
          </div>
@@ -781,16 +862,26 @@
 
    <!--=============== MAIN JS ===============-->
    <script type="module" src="/js/main.js"></script>
+
+   <!--=============== GSAP AND SCROLLTRIGGER ===============-->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
       integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <script src="https://unpkg.com/split-type"></script>
+
+   <!--=============== SPLITTYPE ===============-->
+   <script src="https://unpkg.com/split-type" defer></script>
+   
+   <!--=============== LENIS ===============-->
    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+   <!--=============== JQUERY ===============-->
    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"></script>
+
+      
 </body>
 
 </html>

@@ -198,7 +198,7 @@ function changeTextOnResize() {
             logoElement = document.createElement('img');
             logoElement.setAttribute('data-aos', 'fade-down');
             logoElement.id = 'hero-text-logo';
-            logoElement.src = '/assets/hero/logo-C1dhDkm5.png'; // path for the asset on the live web server
+            logoElement.src = '/assets/hero/logo-C1dhDkm5.png';
             logoElement.alt = 'Dickie & Lyman Logo';
             heroTextContent.insertBefore(logoElement, pElement);
             logoElement.style.width = '450px';
