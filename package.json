@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "npx copyfiles -u 1 _headers/**/* dist/_headers",
     "preview": "vite preview"
   },
   "devDependencies": {
