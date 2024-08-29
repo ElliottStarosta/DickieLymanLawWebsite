@@ -1,0 +1,5 @@
+[headers]
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = ""
