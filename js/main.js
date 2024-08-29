@@ -207,13 +207,13 @@ function changeTextOnResize() {
             logoElement = document.createElement('img');
             logoElement.setAttribute('data-aos', 'fade-down');
             logoElement.id = 'hero-text-logo';
-            logoElement.src = 'assets/logo-cd4goke7.png'; 
-            
+            logoElement.src = '/assets/logo-dl7fomzz.webp';
             logoElement.alt = 'Dickie & Lyman Logo';
             heroTextContent.insertBefore(logoElement, pElement);
             logoElement.style.width = '450px';
             logoElement.style.height = '400px';
             logoElement.style.margin = '20px 0';
+
         }
         if (window.innerWidth <= 330) {
             logoElement.style.width = '205px';
