@@ -30,7 +30,6 @@ window.onload = function () {
 
     setTimeout(() => {
         toggle.className = 'nav__toggle';
-        console.log("removed");
     }, 125);
 };
 
