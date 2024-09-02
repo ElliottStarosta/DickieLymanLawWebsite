@@ -155,6 +155,10 @@
     flex: 1;
 }
 
+.card-dickie {
+    padding-right: 17px;
+}
+
 .reverse-text {
     margin-right: 30px;
 }
