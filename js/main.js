@@ -21,17 +21,32 @@ initLenis();
 window.onload = function () {
     const toggle = document.getElementById("nav-toggle");
 
-    if (window.location.hash !== "#home") {
-        window.location.replace(window.location.pathname + "#home");
+    // Check if the current page is index.html and if the hash is not #home
+    if (window.location.pathname.endsWith('index.html') && window.location.hash !== "#home") {
+        // Construct the new URL with #home
+        const newUrl = window.location.origin + window.location.pathname.replace('index.html', '') + '#home';
+        // Redirect to the new URL
+        window.location.replace(newUrl);
+        // Scroll to the #home section after a slight delay
+        setTimeout(() => {
+            lenis.scrollTo('#home');
+        }, 100);
+    } else if (window.location.hash === "#home") {
+        // If the hash is #home, scroll to the #home section immediately
         setTimeout(() => {
             lenis.scrollTo('#home');
         }, 100);
     }
 
+    // Toggle class after a slight delay
     setTimeout(() => {
         toggle.className = 'nav__toggle';
     }, 125);
 };
+
+
+
+
 
 // Initialize the showMenu function
 showMenu('nav-toggle', 'nav-menu');

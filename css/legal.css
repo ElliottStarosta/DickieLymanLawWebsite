@@ -1,0 +1,165 @@
+/*=============== ID CSS ===============*/
+
+
+#student-articling {
+    background: linear-gradient(200deg, var(--primary-color-light), var(--primary-color-lighten));
+    padding: 40px 20px;
+
+
+}
+
+/*=============== Articling ===============*/
+
+.articling-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5f5;
+    box-shadow: 2px -3px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.articling-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.articling__logo img {
+    width: 400px;
+    height: auto;
+    filter: drop-shadow(0px -2px 4px rgba(0, 0, 0, 0.5));
+
+}
+
+.articling__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+.articling-section img {
+    max-width: 250px;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto 20px;
+    filter: drop-shadow(0px -3px 5px rgba(0, 0, 0, 0.5));
+}
+
+.articling-container h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color)
+}
+
+.articling-container h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.articling-container h4 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.articling-container p,
+.articling-container ul,
+.articling-container li {
+    color: var(--black-100);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.articling-container ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.articling-container ul ul {
+    list-style-type: circle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.articling-container ul ul li {
+    margin-left: 20px;
+}
+
+.articling-container .section-description {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--black-500);
+}
+
+.affiliations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.affiliation-box {
+    height: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
+}
+
+.affiliation-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grid-articling h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+
+/*=============== Media Queries ===============*/
+
+@media (max-width: 1060px) {
+    .affiliations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .affiliation-box:nth-child(3) {
+        grid-column: span 2;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .articling-container {
+        padding: 10px;
+    }
+
+    .affiliations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .affiliation-box:nth-child(3) {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 500px) {
+    .articling__logo img {
+        width: 300px;
+    }
+}

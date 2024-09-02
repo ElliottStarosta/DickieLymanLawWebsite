@@ -8,6 +8,7 @@ footer {
   font-family: Arial, sans-serif;
   min-height: calc(70vh - 20px);
   overflow: hidden;
+  position: relative;
 }
 
 .footer-container {
@@ -63,12 +64,53 @@ footer {
 .attributions a {
   color: var(--gray-100);
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .attributions a:hover {
   color: var(--black-300);
   font-style: italic;
 }
+
+.copyright a, .legal__nav a {
+  color: var(--gray-100);
+  transition: color 0.3s ease-in-out, text-decoration 2s ease;  
+}
+
+.copyright a:hover, .legal__nav a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+}
+
+.copyright p {
+  margin: 0;
+}
+
+.legal__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+
+
+
 
 
 /*=============== Media Queries ===============*/
