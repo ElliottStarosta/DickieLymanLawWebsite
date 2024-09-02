@@ -36,6 +36,13 @@ window.onload = function () {
         setTimeout(() => {
             lenis.scrollTo('#home');
         }, 100);
+    } else if (!window.location.pathname.endsWith('legal-disclaimer.html') && window.location.hash !== "home") {
+         // Construct the new URL with #home
+        const newUrl = window.location.origin + window.location.pathname.replace('index.html', '') + '#home';
+         // Redirect to the new URL
+        window.location.replace(newUrl);
+         // Scroll to the #home section after a slight delay
+        
     }
 
     // Toggle class after a slight delay
