@@ -163,3 +163,10 @@
     width: 300px;
   }
 }
+
+@media (max-width: 400px) {
+  .affiliation-box img {
+    width: calc(100% - 30px)
+  }
+}
+
