@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
-    "vite": "^5.3.5"
+    "vite": "^5.4.11"
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",

@@ -10,6 +10,9 @@
 
 /*=============== Articling ===============*/
 
+p { 
+  margin-bottom: 20px;
+}
 .articling-container {
   max-width: 1200px;
   margin: 0 auto;

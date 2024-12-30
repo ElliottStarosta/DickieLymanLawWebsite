@@ -92,8 +92,8 @@ document.querySelectorAll('.nav__link').forEach(link => {
         event.preventDefault();
         const text = link.textContent.trim();   
         
-        if (text.includes('Student Articling')) {
-            updateHashAndLog('student-articling');
+        if (text.includes('Community Involvement & Affiliations')) {
+            updateHashAndLog('community-involvement-affiliations');
             scrollToAnchor('#student-articling');
         } else if(text.includes('Contact Us')) {
             updateHashAndLog('contact');
