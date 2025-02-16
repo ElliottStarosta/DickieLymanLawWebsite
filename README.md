@@ -5,8 +5,6 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/aa1dce55-1cc6-4b3c-974f-15293560dbf5/deploy-status)](https://app.netlify.com/sites/dickieandlyman/deploys)
-
 
 ## Description
 
